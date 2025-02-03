@@ -1,0 +1,1224 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hello",
+          "Hey",
+          "Good morning",
+          "Good afternoon",
+          "Good evening",
+          "Howdy",
+          "Greetings",
+          "What's up",
+          "How are you?",
+          "Is anyone there?",
+          "Good day",
+          "How's it going?",
+          "Hey there",
+          "What's happening",
+          "Heyyy",
+          "Yo",
+          "Hola",
+          "Hiya"
+        ],
+        "responses": [
+          "Hello!",
+          "Good to see you again!",
+          "Hi there, how can I help?"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Goodbye",
+          "Bye",
+          "See you later",
+          "See you",
+          "Take care",
+          "Catch you later",
+          "Adios",
+          "Farewell",
+          "Until next time",
+          "So long",
+          "I'm out",
+          "Gotta go",
+          "Till we meet again",
+          "Peace out",
+          "Later",
+          "Ciao",
+          "Bye-bye"
+        ],
+        "responses": [
+          "Sad to see you go :(",
+          "Talk to you later",
+          "Goodbye!",
+          "Come back soon"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "creator",
+        "patterns": [
+          "what is the name of your developers",
+          "what is the name of your creators",
+          "what is the name of the developers",
+          "what is the name of the creators",
+          "who created you",
+          "your developers",
+          "your creators",
+          "who are your developers",
+          "developers",
+          "you are made by",
+          "you are made by whom",
+          "who created you",
+          "who create you",
+          "creators",
+          "who made you",
+          "who designed you"
+        ],
+        "responses": [
+          "College students"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "name",
+        "patterns": [
+          "What's your name?",
+          "Do you have a name?",
+          "What are you called?",
+          "Who are you?",
+          "What should I call you?",
+          "What are you?",
+          "Who is this?",
+          "What am I chatting to?",
+          "Who am I talking to?",
+          "Your name?",
+          "What's your name?",
+          "Who are you exactly?",
+          "Who are you really?",
+          "Identify yourself"
+        ],
+        "responses": [
+          "You can call me ADDD.",
+          "I'm ADDD",
+          "I am a Chatbot.",
+          "I am your helper"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "timings",
+        "patterns": [
+          "timing of college",
+          "What are the opening hours?",
+          "When do you open?",
+          "When do you close?",
+          "What time are you open?",
+          "Working hours?",
+          "Operating hours?",
+          "Hours of operation?",
+          "When are you guys open?",
+          "What's the schedule?",
+          "When should I visit?",
+          "When can I come?",
+          "What are the timings?",
+          "What are your hours?",
+          "When is the college open?",
+          "College timing",
+          "What about college timing",
+          "Is college open on Saturday",
+          "Tell something about college timing",
+          "What is the college hours",
+          "When should I come to college",
+          "When should I attend college",
+          "What is my college time",
+          "College timing in hours",
+          "Timing of college"
+        ],
+        "responses": [
+          "College will be open from 9am-5pm on Monday-Friday!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "contact",
+        "patterns": [
+          "more info",
+          "contact info",
+          "More information",
+          "Contact information",
+          "How to contact college",
+          "College telephone number",
+          "College number",
+          "contact details","contact",
+          "What is your contact number",
+          "Contact number?",
+          "How to call you",
+          "College phone number?",
+          "How can I contact you",
+          "Can I get your phone number",
+          "College email address",
+          "email address of the college",
+          "email address of RGM",
+          "How can I contact you",
+          "Phone number",
+          "Phone no",
+          "What is your email address",
+          "Email address",  "Email",
+          "Email id",   "Contact email",
+          "mail",
+          "Call",
+          "Contact details"
+        ],
+        "responses": [
+          "You can contact : : 6290821300 (Accounts), Mobile: 6290821297 (Exam/Admission) and email:  principal@rcciit.org.in"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "course",
+        "patterns": [
+          "list of courses",
+          "list of courses offered",
+          "list of courses offered in",
+          "what are the courses offered in your college?",
+          "what are the branches offered in your college?",
+          "courses?","branches",
+          "branches offered",
+          "courses offered",
+          "courses offered in RCCIIT",
+          "courses you offer",
+          "branches offered in RCCIIT",
+          "branches?",
+          "courses available at RCCIIT?",
+          "branches available at your college?",
+          "what are the courses in RCCIIT?",
+          "what are branches in RCCIIT?",
+          "what are courses in RCCIIT",
+          "branches available in RCCIIT?",
+          "can you tell me the courses available in RCCIIT?",
+          "can you tell me the branches available in RCCIIT?"
+          
+        ],
+        "responses": [
+          "Our college offers B.Tech in Computer Science and Engineering and its allied course Artificial Intelligence and Machine Learning, Information Technology, Electronics and Commmunication Engineering, Electrical engineering. M.Tech in Computer Science and Technology. MCA, BCA, B.Sc(CS)."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "fees",
+        "patterns": [
+          "information about fee",
+          "information on fee",
+          "tell me the fee",
+          "college fee",
+          "fee per semester",
+          "what is the fee of each semester",
+          "what is the fees of each year",
+          "what is fee",
+          "what is the fees",
+          "how much is the fees",
+          "fees for first year",
+          "fees",
+          "about the fees",
+          "tell me something about the fees",
+          "What is the fees of hostel",
+          "how much is the fees",
+          "hostel fees",
+          "fees for AC room",
+          "fees for non-AC room",
+          "fees for Ac room for girls",
+          "fees for non-Ac room for girls",
+          "fees for Ac room for boys",
+          "fees for non-Ac room for boys"
+        ],
+        "responses": [
+          "For Fee detail visit <a target=\"_blank\" href=\"http://www.ipu.ac.in/Pubinfo2019/Admission2019mian/adm2019main.htm/\"> here</a>",
+          "For Fee detail visit <a target=\"_blank\" href=\"https://www.rgmcet.edu.in/feestructure\"> here</a>"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "location",
+        "patterns": [
+          "where is the college located",
+          "college is located at",
+          "where is college",
+          "where is college located",
+          "address of college",
+          "how to reach college",
+          "college location",
+          "college address",
+          "location of RCCIIT",
+          "wheres the college",
+          "how can I reach college",
+          "whats is the college address",
+          "what is the address of college",
+          "address",
+          "Directions to college",
+          "location"
+        ],
+        "responses": [
+          "Address-  Canal S Rd, Beleghata, Kolkata, West Bengal 700015,\n Click on this <a target=\"_blank\" href=\"https://maps.app.goo.gl/iHySURSVLmPwNw6h6\">link </a> to view our college in maps."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "hostel",
+        "patterns": [
+          "Hostel",
+          "hostel fee",
+          "hostel details",
+          "hostel facility",
+          "hostel servive",
+          "hostel location",
+          "hostel address","Does college provide hostel",
+          "Is there any hostel",
+          "What is the fees of hostel",
+          "how much is the fees",
+          "hostel fees",
+          "fees for AC room",
+          "fees for non-AC room",
+          "fees for Ac room for girls",
+          "fees for non-Ac room for girls",
+          "fees for Ac room for boys",
+          "fees for non-Ac room for boys",
+          "Where is hostel",
+          "do you have hostel",
+          "do you guys have hostel",
+          "hostel",
+          "hostel capacity",
+          "what is the hostel fee",
+          "how to get in hostel",
+          "what is the hostel address",
+          "how far is hostel from college",
+          "hostel college distance",
+          "where is the hostel",
+          "how big is the hostel",
+          "distance between college and hostel",
+          "distance between hostel and college",        
+          "hostel facilities",
+          "hostel fees",
+          "hostel rooms",
+          "hostel room types",
+          "hostel mess",
+          "hostel fee structure",
+          "hostel fee details",
+          "hostel fee per semester",
+          "hostel fee per year",
+          "hostel fee per month",
+          "hostel fee per student",
+          "hostel fee for girls",
+          "hostel fee for boys",
+          "hostel fee structure ",
+          "hostel fee structure "
+        ],
+        "responses": [
+          "RCC Institute of Information Technology does not have any hostel facilities."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "event",
+        "patterns": [
+          "Events organised",
+          "List of events",
+          "List of events organised in college",
+          "List of events conducted in college",
+          "What events are conducted in college",
+          "Are there any event held at college",
+          "Functions",
+          "What are the events",
+          "Tell me about events",
+          "What about events",
+          "Upcoming events",
+          "Any events?"
+        ],
+        "responses": [
+          "Events in RCCIIT are conducted by SWC.Some events of RCCIIT are GOT, TechTrix, Regalia, Bihaan "
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "document",
+        "patterns": [
+          "document to bring",
+          "documents needed for admission",
+          "documents needed at the time of admission",
+          "documents needed during admission",
+          "documents required for admission",
+          "documents required at the time of admission",
+          "documents required during admission",
+          "What document are required for admission",
+          "Which document to bring for admission",
+          "documents",
+          "what documents do i need",
+          "what documents do I need for admission",
+          "documents needed"
+        ],
+        "responses": [
+          "B.Tech Programmes: Admissions into all the UG Programmes (B.Tech) in the college are made by JEE-Mains and WBJEE based on the nation/state wide ranks obtained in the JEE-Mains/WBJEE. The selection process is purely based on the marks and ranks obtained in the JEE-Mains and WBJEE.\n M.Tech Programmes: Admissions into the PG Programmes in the college are based on the merit / ranks / scores of candidates in the national eligibility test GATE. \n The needed Documents were mentioned at their result cards on WEBJEE or GATE"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "floors",
+        "patterns": [
+          "size of campus",
+          "building size",
+          "How many floors does college have",
+          "floors in college",
+          "floors in college",
+          "how tall is UNI's College of Engineering college building",
+          "floors"
+        ],
+        "responses": [
+          "RCCIIT College has 2 buildings(Old building and New Building). UG, PG, RB, CIVIL, MECH blacks with 3 floors"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "syllabus",
+        "patterns": [
+          "Syllabus for all years",
+          "what is the syllabus for rcciit college students",
+          "syllabus",
+          "timetable",
+          "what is semester syllabus",
+          "syllabus",
+          "What is next lecture"
+        ],
+        "responses": [
+          "Click on the <a target=\"_blank\" href=\"https://rgmexams.co.in/index.php\"> link</a> for the syllabus"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "library",
+        "patterns": [
+          "Is there any library",
+          "Library facility",
+          "Library facilities",
+          "Do you have library",
+          "Does the college have library facility",
+          "College library",
+          "Where can I get books",
+          "Book facility",
+          "Central Library",
+          "Where is library",
+          "Library",
+          "Tell me about the College Library",
+          "Library books information",
+          "Tell me about library",
+          "How many libraries",
+          "Book collection"
+        ],
+        "responses": [
+          "The central Library is located in spacious individual three storied fully air conditioned building.The Central Library has a huge collection of 12741 titles, 75935 books (69,391 books, 4373 SC Book bank scheme books, 2171 ST Book bank scheme books (total 75,935), subscribes to more than 150 print international and national journals , 3144 Back volumes, General magazines, Digital books and online resources on Engineering, Science, Humanities and Management. Reprographic facilities and Internet facilities are available in the Central Library"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "infrastructure",
+        "patterns": [
+          "how is college infrastructure",
+          "infrastructure",
+          "rgm college infrastructure"
+        ],
+        "responses": [
+          "The infrastructure of college is good.",
+          "for more information see this website <a>http://rgmcollegeattappadi.ac.in/?page_id=783</a>"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "canteen",
+        "patterns": [
+          "Food facilities",
+          "Canteen facilities",
+          "Canteen facility",
+          "Is there any canteen",
+          "Is there a cafeteria in college",
+          "Does college have canteen",
+          "Where is canteen",
+          "Where is cafeteria",
+          "Canteen",
+          "Food",
+          "Cafeteria",
+          "Food service",
+          "Eating options"
+        ],
+        "responses": [
+          "There is a centralized AC canteen named Rahul Gandhi Canteen, where there are 5 kind of stalls.There is a vast space around to sit.They provide Tiffins, Meals, Fruits, Fruit Juices, Coffee,Tea, Milkshakes,Chineese foods, Fast foods, Cakes and bakes,Breads and buns."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "food",
+        "patterns": [
+          "food menu",
+          "menu",
+          "food in canteen",
+          "Whats there on menu",
+          "what is available in college canteen",
+          "what foods can we get in college canteen",
+          "food variety",
+          "tasty item",
+          "What is there to eat?"
+        ],
+        "responses": [
+          "RGM canteen provides Tiffins, Meals, Fruits, Fruit Juices, Coffee,Tea, Milkshakes,Chineese foods, Fast foods, Cakes and bakes,Breads and buns."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "placement",
+        "patterns": [
+          "What is college placement",
+          "Which companies visit in college",
+          "What is average package",
+          "companies visit",
+          "About placement",
+          "placement",
+          "recruitment",
+          "Employment opportunities",
+          "companies"
+        ],
+        "responses": [
+          "Our college placement statistics has a rapid growth from the past 7 years by these placement partners like TCS,wipro,Virtusa,CTS,Hexaware,KIA,HTC,Infosys,Byjus,epam, BPR infratc,Automotive,and more. For more <a target=\"_blank\" href=\" https://www.rgmcet.edu.in/Placement_Records\">link </a>"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "CSE Hod",
+        "patterns": [
+          "Who is CSE HOD",
+          "CSE HOD",
+          "CSE hod",
+          "hod of cse",
+          "hod of computer science",
+          "hod of computer science and engineering",
+          "Computer Science and Engineering HOD",
+          "name of CSE hod"
+        ],
+        "responses": [
+          "HOD of CSE: Dr. Anup Kumar Koyla, Professor, Department of CSE"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "ECE Hod",
+        "patterns": [
+          "Who is ECE HOD",
+          "ECE hod","hod of ece",
+          "ECE HOD",
+          "hod of Electronics and communication",
+          "Electronics and Communication Engineering HOD",
+          "name of ECE hod"
+        ],
+        "responses": [
+          "HOD of ECE: Dr.K.Mallikarjuna, Professor, Department of ECE"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "EEE Hod",
+        "patterns": [
+          "Who is EEE HOD",
+          "hod of eee",
+          "EEE HOD",
+          "EEE hod",
+          "hod of electrical",
+          "hod of Electrical and electronics",
+          "Electrical and Electronics Engineering HOD",
+          "name of EEE hod"
+        ],
+        "responses": [
+          "HOD of EEE: Dr.V.Naga Bhaskar Reddy, Professor, Department of EEE"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Weather",
+        "patterns": [
+          "What's the weather like today?",
+          "Will it rain tomorrow?",
+          "weather",
+          "How hot is it outside?",
+          "Is it going to be sunny this weekend?"
+        ],
+        "responses": [
+          "here pleseant weather is there at college premesis"
+        ],
+        "context_set": "weather_city_selection"
+      },
+      {
+        "tag": "WeatherCitySelection",
+        "patterns": [
+          "New York",
+          "Los Angeles",
+          "Chicago",
+          "Houston",
+          "Miami"
+        ],
+        "responses": [
+          "Here is the weather forecast for {city}.",
+          "The weather forecast for {city} is..."
+        ],
+        "context_filter": "weather_city_selection"
+      },
+      
+      {
+        "tag": "Chairman",
+        "patterns": [
+          "Who is the chairman of RGM college",
+          "Chairman",
+          "charirman of RGM"
+        ],
+        "responses": [
+          "Chairman: Dr.M. Shanti Ramudu"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Student details",
+        "patterns": [
+          "admission number",
+          "registration number",
+          "Roll number",
+          "student details",
+          "I want to know about the student details",
+          "I want to know about the registration numbers"
+        ],
+        "responses": [
+          "Students admission / registration numbers starts with their join year containing branch code ex. 20091A0563(here starting 20 indicates joining year and 5 indicates cse branch code)"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Principal",
+        "patterns": [
+          "what is the name of principal",
+          "what is the principal name",
+          "principal name",
+          "Who is college principal",
+          "Where is principal's office",
+          "principal",
+          "name of principal"
+        ],
+        "responses": [
+          "Dr. T. Jayachandra Prasad, Professor & Principal of RGMCET."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Sem",
+        "patterns": [
+          "exam dates",
+          "exam schedule",
+          "When is semester exam",
+          "Semester exam timetable",
+          "sem",
+          "semester",
+          "exam",
+          "when is exam",
+          "exam timetable",
+          "exam dates",
+          "when is semester"
+        ],
+        "responses": [
+          "Here is the Academic Calendar  <a target=\"_blank\" href=\"https://rgmexams.co.in/Examinations.php\">website</a>"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Scholarship",
+        "patterns": [
+          "Is there any scholarship based on EAMCET rank",
+          "scholarship based on EAMCET rank",
+          "Is scholarship available",
+          "scholarship engineering",
+          "scholarship it",
+          "scholarship ce",
+          "scholarship mechanical",
+          "scholarship civil",
+          "scholarship chemical",
+          "scholarship for AI/ML",
+          "available scholarships",
+          "scholarship for computer engineering",
+          "scholarship for IT engineering",
+          "scholarship for mechanical engineering",
+          "scholarship for civil engineering",
+          "scholarship for chemical engineering",
+          "list of scholarship",
+          "comps scholarship",
+          "IT scholarship",
+          "mechanical scholarship",
+          "civil scholarship",
+          "chemical scholarship",
+          "automobile scholarship",
+          "first year scholarship",
+          "second year scholarship",
+          "third year scholarship",
+          "fourth year scholarship"
+        ],
+        "responses": [
+          "The college offers COMPLETE TUITION FEE WAIVER FOR ALL THE FOUR YEARS of the B.Tech course to students who join this college with less than 10,000 rank in EAMCET."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Bus Facilities",
+        "patterns": [
+          "Bus facilities",
+          "where can i start by bus",
+          "Bus",
+          "Buses",
+          "bus provision",
+          "transport facility",
+          "transport provision",
+          "What are the places does buses run",
+          "picking bus",
+          "bus facility",
+          "Transportation",
+          "How can I travel by bus",
+          "Bus schedule",
+          "Bus routes"
+        ],
+        "responses": [
+          "Buses transportation can be provided from Nandyal, Allagadda, Kurnool",
+          "You can catch buses from various locations including Nandyal, Allagadda, and Kurnool.",
+          "Bus services are available from multiple areas such as Nandyal, Allagadda, and Kurnool."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "College Intake",
+        "patterns": [
+          "max number of students",
+          "number of seats per branch",
+          "number of seats in each branch",
+          "maximum number of seats",
+          "maximum students intake",
+          "What is college intake",
+          "how many student are taken in each branch",
+          "seat allotment",
+          "seats"
+        ],
+        "responses": [
+          "Maximum intake for Each Branch is Civil Engineering 180\n Electrical and Electronics Engineering 120 \n Electronics Engineering 240\n Computer Science and Engineering 180\n Mechanical Engineering 180"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Uniform",
+        "patterns": [
+          "college dress code",
+          "college dresscode",
+          "what is the uniform",
+          "can we wear casuals",
+          "Does college have an uniform",
+          "Is there any uniform",
+          "uniform",
+          "what about uniform",
+          "do we have to wear uniform"
+        ],
+        "responses": [
+          "There is a flex in college uniform but students should maintain Apron uniform(Khaki dress) for the labs"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Committee",
+        "patterns": [
+          "what are the different committees in college",
+          "different committee in college",
+          "Are there any committees in college",
+          "Give me committee details",
+          "committee",
+          "how many committees are there in college"
+        ],
+        "responses": [
+          "response for Committee"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Marks",
+        "patterns": [
+          "Give me my marks",
+          "i need my marks",
+          "Give me my results",
+          "Results",
+          "Exam results",
+          "Marks",
+          "Rank card",
+          "show my rank card",
+          "Check my marks",
+          "View my results",
+          "How did I perform in the exam?",
+          "What is my score?",
+          "Show my grades"       
+        ],
+        "responses": [
+        
+          "Click on the <a target=\"_blank\" href=\"https://rgmexams.co.in/index.php\"> link</a> for your results",
+          "You can find your marks by visiting the <a target=\"_blank\" href=\"https://rgmexams.co.in/index.php\"> link</a>.",
+          "Access your results through the <a target=\"_blank\" href=\"https://rgmexams.co.in/index.php\"> link</a> provided.",
+          "Your exam results are available at the <a target=\"_blank\" href=\"https://rgmexams.co.in/index.php\"> link</a>."
+        ],
+        
+        "context_set": ""
+      },    
+      {
+        "tag": "Swear",
+        "patterns": [
+          "fuck",
+          "bitch",
+          "shut up",
+          "hell",
+          "stupid",
+          "idiot",
+          "dumb ass",
+          "asshole",
+          "fucker"
+        ],
+        "responses": [
+          "That's a bad language. please try to chat quietely"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Vacation",
+        "patterns": [
+          "holidays",
+          "when will semester starts",
+          "when will semester end",
+          "when is the holidays",
+          "list of holidays",
+          "Holiday in these year",
+          "holiday list",
+          "about vacations",
+          "about holidays",
+          "When is vacation",
+          "When is holidays",
+          "how long will be the vacation"
+  
+        ],
+        "responses": [
+          "Please refer academic calendar <a target=\"_blank\" href=\"https://rgmexams.co.in/Examinations.php\">here</a>"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Sports",
+        "patterns": [
+          "sports and games",
+          "give sports details",
+          "sports infrastructure",
+          "sports facilities",
+          "information about sports",
+          "Sports activities",
+          "please provide sports and games information"
+        ],
+        "responses": [
+          "The Physical Education Department has sufficient supporting staff to help the students and faculty members in using fitness, sports and games facilities. The College has a big play ground laid down the following fields.Volleyball,Basketball,Ball Badminton, Kabadi,Football,Cricket,Table Tennis,Athletics,Gym,Indoor Stadium"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "CSE_Info",
+        "patterns": [
+          "CSE department",
+          "about CSE",
+          "CSE details",
+          "CSE information",
+          "CSE branch","Computer Science", "CSE"
+        ],
+        "responses": [
+          "The Computer Science and Engineering (CSE) department offers undergraduate and graduate programs in computer science, covering topics such as algorithms, data structures, programming languages, software engineering, and more."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "ECE_Info",
+        "patterns": [
+          "ECE department",
+          "about ECE",
+          "ECE details",
+          "ECE information",
+          "ECE branch","ECE"
+        ],
+        "responses": [
+          "The Electronics and Communication Engineering (ECE) department offers undergraduate and graduate programs focusing on electronics, communication systems, signal processing, microelectronics, and related areas."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "EEE_Info",
+        "patterns": [
+          "EEE department",
+          "about EEE",
+          "EEE details","EEE",
+          "EEE information",
+          "EEE branch"
+        ],
+        "responses": [
+          "The Electrical and Electronics Engineering (EEE) department offers undergraduate and graduate programs covering areas such as electrical machines, power systems, control systems, renewable energy, and more."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Salutation",
+        "patterns": [
+          "okk",
+          "okie",
+          "nice work",
+          "well done",
+          "good job",
+          "thanks for the help",
+          "Thank You"
+        ],
+        "responses": [
+          "response for Salutation"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "CSE faculty",
+        "patterns": [
+          "CSE faculty details",
+          "CSE faculty information",
+          "list of CSE faculty",
+          "Lecturers in CSE department",
+          "CSE faculty list",
+          "who are the CSE faculty members",
+          "CSE faculty details"
+        ],
+        "responses": [
+          {
+          
+            "faculty": [
+              {
+                "name": "Prof. Prahlada Rao B.B.",
+                "designation": "Professor & Dean",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. G. SUNIL VIJAYA KUMAR",
+                "designation": "Professor & Dean",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. N Madhusudhana Reddy",
+                "designation": "Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. G. Kishor Kumar",
+                "designation": "Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. R. Kaviarasan",
+                "designation": "Associate Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Mr. B.Bhaskar Rao",
+                "designation": "Associate Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. P Naveen Sundar Kumar",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. G Rajasekhar Reddy",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. P Dastagiri Reddy",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. V Ravikanth",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. T Sravani",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Ms. P.Sucharitha",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. T. Gurappa",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs.T. Suvarna",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs.G.Nagapavani",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs.Y.Durgatejaswi",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. D.Sravanthi",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. S Rubia Parveen",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. B.V.Chandra Sekhar",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. S Tahseen Banu",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. K. Viswanath",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. G V S Sowmya",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. K K Nagendra",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. B. VENKATESH",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. M VISHALAKSHI",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. P UDAYINI",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. K MALLIKARJUNA",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. B KUMAR",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. G SHISHADHAR",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. M MAHABOOB PEERA",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. M MOHAMMED FAYAZ",
+                "designation": "Assistant Professor",
+                "qualification": "MCA"
+              },
+              {
+                "name": "Mr. S PRAVEEN KUMAR",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Dr. K Subba Reddy",
+                "designation": "Professor & HOD",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. R Raja Kumar",
+                "designation": "Associate Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. P Prathap Naidu",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Dr. M. Sravan Kumar Reddy",
+                "designation": "Associate Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. K E Naresh Kumar",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. K.Nageswara Reddy",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. K.Narasimhulu",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Dr. Pogula Sreedevi",
+                "designation": "Associate Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Mr. P. Arun Babu",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. C Hrishikesava Reddy",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Dr. M. Suleman Basha",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech & Ph.D"
+              },
+              {
+                "name": "Mr. K R Harinath",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. Janardhan Komarolu",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. B Swetha",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. Chaitanya Nukala",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. Y Suresh Reddy",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. V. Phanishwara Hara Gopal",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Ms. S. Sai Sravya",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Ms. K.Jayasri",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Ms. D.Karishma",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. S PARIMALA",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. S SADHAM HUSSAIN",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. Vaseem Akram",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. Adilakshmi",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. MEGHAM SHYAM",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. Shaik Rafi",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mrs. P ARUNA",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. P HADELY MOSES",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. P SOLOMAN RAJ",
+                "designation": "Assistant Professor",
+                "qualification": "M.Tech"
+              },
+              {
+                "name": "Mr. S DASTAGIRI",
+                "designation": "Assistant Professor",
+                "qualification": "MCA"
+              }
+            ]
+          }
+        ],
+        "context_set": ""
+      }
+     
+    ]
+  }
+  
