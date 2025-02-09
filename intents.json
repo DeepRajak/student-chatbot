@@ -873,6 +873,22 @@
         "context_set": ""
       },
       {
+        "tag": "student_clubs",
+        "patterns": [
+            "What student clubs are available at RCCIIT?",
+            "Are there any technical societies at RCCIIT?",
+            "Can I join a cultural club at RCCIIT?",
+            "What extracurricular activities does RCCIIT offer?",
+            "Does RCCIIT have a robotics club?",
+            "Are there any entrepreneurship cells in RCCIIT?"
+        ],
+        "responses": [
+            "RCCIIT has various student clubs including coding, robotics, music, drama, sports, and entrepreneurship cells. Join one that matches your interests!"
+        ],
+        "context_set": ""
+      },
+    
+      {
         "tag": "Salutation",
         "patterns": [
           "okk",
@@ -888,6 +904,89 @@
         ],
         "context_set": ""
       },
+      [
+        {
+            "tag": "admission_process",
+            "patterns": [
+                "How do I get admission in RCCIIT?",
+                "What are the eligibility criteria for CSE at RCCIIT?",
+                "Is there an entrance exam for BTech at RCCIIT?",
+                "Can I apply for multiple branches in RCCIIT?",
+                "What is the cutoff rank for ECE at RCCIIT?",
+                "Does RCCIIT accept lateral entry students?",
+                "Are there any reserved seats for female candidates?"
+            ],
+            "responses": [
+                "Admissions at RCCIIT are based on entrance exams and merit. Visit our official website for detailed eligibility and application guidelines."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "courses_offered",
+            "patterns": [
+                "What BTech branches are available at RCCIIT?",
+                "Does RCCIIT offer CSE with AI & ML?",
+                "Which is better: CSE or IT at RCCIIT?",
+                "Can I switch from ECE to CSE in RCCIIT?",
+                "Does RCCIIT offer a minor degree in AI & ML?",
+                "Is Data Science part of the IT curriculum?",
+                "What are the most popular electives in CSE?"
+            ],
+            "responses": [
+                "RCCIIT offers BTech programs in CSE, IT, CSE (AI & ML), ECE, and EE. Each program has specialized electives to suit industry needs."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "fee_structure",
+            "patterns": [
+                "What is the total tuition fee for CSE at RCCIIT?",
+                "How much does BTech in IT cost at RCCIIT?",
+                "Is the fee for AI & ML different from regular CSE?",
+                "Can I pay my fees in installments?",
+                "Does RCCIIT charge extra for lab facilities?",
+                "Are there any hidden charges apart from tuition?",
+                "What is the hostel fee for students?"
+            ],
+            "responses": [
+                "The tuition fee for BTech at RCCIIT is ₹2,00,000 per year. Additional charges may apply for hostel, examination, and other facilities."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "scholarships",
+            "patterns": [
+                "What scholarships are available for RCCIIT students?",
+                "Does RCCIIT offer financial aid?",
+                "How can I apply for scholarships at RCCIIT?",
+                "Are there merit-based scholarships?",
+                "Does RCCIIT offer need-based scholarships?",
+                "Can students get government scholarships at RCCIIT?",
+                "Is there a scholarship for top JEE rank holders?"
+            ],
+            "responses": [
+                "RCCIIT offers scholarships based on merit, financial need, and government programs. Check our official website for application details."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "placement_opportunities",
+            "patterns": [
+                "What is the placement record of RCCIIT?",
+                "Which companies visit RCCIIT for recruitment?",
+                "What are the highest placement packages at RCCIIT?",
+                "Does RCCIIT provide placement assistance?",
+                "What percentage of students get placed from CSE?",
+                "Do IT students get better job offers than ECE?",
+                "Which branch has the best placement at RCCIIT?"
+            ],
+            "responses": [
+                "RCCIIT has a strong placement record with companies like TCS, Infosys, Wipro, and Capgemini hiring students annually."
+            ],
+            "context_set": ""
+        }
+    ],
+    
       {
         "tag": "CSE faculty",
         "patterns": [
