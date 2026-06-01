@@ -97,14 +97,8 @@ npm run dev --prefix frontend
 **Contributing**
 - Feel free to open issues or pull requests. If you update intents, please add example `patterns` for short quick prompts (the model can misclassify short canned prompts without explicit examples).
 
-**License & Maintainer**
-- Add your preferred license to make this repo public. Maintainer: add contact details here.
-
 -----
-If you'd like, I can also:
-- Commit and push this README for you.
-- Expand the docs with a quick developer workflow (Git branches, test commands), or add a sample `docker-compose.yml` for local development.
-This repository is now split into two service folders:
+This repository is split into two service folders:
 
 - [frontend/](frontend) for the Next.js app
 - [backend/](backend) for the Flask chatbot API and model files
