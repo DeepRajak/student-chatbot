@@ -1,0 +1,793 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Howdy",
+        "Greetings",
+        "What's up?",
+        "How are you?",
+        "Is anyone there?",
+        "Good day",
+        "How's it going?",
+        "Hey there",
+        "What's happening?",
+        "Yo",
+        "Hola",
+        "Hiya"
+      ],
+      "responses": [
+        "Hello! How can we assist you with RCCIIT today?",
+        "Welcome to RCCIIT — ask us about departments, admissions, faculty, or contact information.",
+        "Hi there! We're happy to help with any questions about RCCIIT."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "See you",
+        "Take care",
+        "Catch you later",
+        "Farewell",
+        "Until next time",
+        "So long",
+        "I'm out",
+        "Gotta go",
+        "Later",
+        "Ciao",
+        "Bye-bye"
+      ],
+      "responses": [
+        "Goodbye! We're here if you need more assistance.",
+        "Take care — contact us anytime for RCCIIT information.",
+        "Farewell. Wishing you all the best from RCCIIT."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "Who created you?",
+        "Who are your developers?",
+        "Who made you?",
+        "Who designed you?",
+        "Who are your creators?",
+        "Who developed you?",
+        "Who built this chatbot?",
+        "Who is behind this chatbot?",
+        "Who programmed you?",
+        "Who made this bot?",
+        "Who coded you?",
+        "Who are the minds behind this bot?"
+      ],
+      "responses": [
+        "This chatbot was developed to support RCCIIT students and visitors.",
+        "I was created to help you get information about RCCIIT and its services."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "What's your name?",
+        "Do you have a name?",
+        "What are you called?",
+        "Who are you?",
+        "What should I call you?",
+        "What are you?",
+        "Who is this?",
+        "What am I chatting with?",
+        "Who am I talking to?",
+        "Tell me your name",
+        "Who are you exactly?",
+        "Identify yourself"
+      ],
+      "responses": [
+        "I am RoboAssist, RCCIIT's virtual assistant. How may I help you?",
+        "You can call me RoboAssist — I'm here on behalf of RCCIIT to assist you."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "about_rcciit",
+      "patterns": [
+        "Tell me about RCCIIT",
+        "What is RCCIIT?",
+        "About the college",
+        "Introduce RCCIIT",
+        "College overview",
+        "What kind of institute is RCCIIT?"
+      ],
+      "responses": [
+        "RCC Institute of Information Technology (RCCIIT) was established in 1999 by the Regional Computer Centre, Calcutta, as a joint venture of NIC, the Ministry of Communication & IT, Government of India, and the Department of Higher Education, Government of West Bengal. We are now administered by the State Government and operate from our Kolkata campus at Canal S Rd, Beleghata. We hold autonomous status and several of our programs are NBA-accredited."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "accreditation",
+      "patterns": [
+        "Is RCCIIT autonomous?",
+        "What accreditations does RCCIIT have?",
+        "Is the college NAAC accredited?",
+        "Is the college NBA accredited?",
+        "Autonomous status",
+        "Accreditation details"
+      ],
+      "responses": [
+        "We have been granted autonomous status by the UGC, hold NAAC accreditation (score 2.94 in the first cycle), and several of our undergraduate engineering programs are NBA-accredited."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact RCCIIT?",
+        "College contact details",
+        "What is the college phone number?",
+        "College email address?",
+        "How to reach the college?",
+        "What are the contact details?",
+        "Contact information",
+        "Official contact details",
+        "Phone number of RCCIIT",
+        "Email ID of the college"
+      ],
+      "responses": [
+        "You can contact us at +91 62908 21297. Our official website is https://rcciit.edu.in/ and our campus address is Canal S Rd, Beleghata, Kolkata, West Bengal 700015.",
+        "For email, admissions, and department contacts please visit https://rcciit.edu.in/contact or call +91 62908 21297."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where is RCCIIT located?",
+        "College location?",
+        "What is the college address?",
+        "How do I reach the college?",
+        "Directions to the college",
+        "Show me the college location"
+      ],
+      "responses": [
+        "Our campus is located at Canal S Rd, Beleghata, Kolkata, West Bengal 700015. You can find directions on Google Maps via our website.",
+        "We're at Canal S Rd, Beleghata, Kolkata — please visit https://rcciit.edu.in for maps and directions."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "timings",
+      "patterns": [
+        "What are the college timings?",
+        "College opening and closing time?",
+        "When does the college open?",
+        "When does the college close?",
+        "What are the working hours?",
+        "Operating hours of the college?"
+      ],
+      "responses": [
+        "We do not list fixed public office hours online — please check our latest notices or contact the college office for current timings.",
+        "For current office hours, please contact us or view recent notices on https://rcciit.edu.in/notices."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "chairman",
+      "patterns": [
+        "Who is the chairman of RCCIIT?",
+        "Chairman",
+        "chairman of RCCIIT",
+        "Who heads the governing body?"
+      ],
+      "responses": [
+        "Our Chairman is Dr. Siddhartha Chatterjee."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "principal",
+      "patterns": [
+        "Who is the principal?",
+        "principal name",
+        "name of principal",
+        "Who is college principal",
+        "Principal's name"
+      ],
+      "responses": [
+        "Our Principal In-Charge is Prof. (Dr.) Ashoke Mondal, Professor in ECE."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "governing_body",
+      "patterns": [
+        "Governing body",
+        "Board of management",
+        "Who are the members of the governing body?",
+        "RCCIIT governing body"
+      ],
+      "responses": [
+        "Our governing body includes Dr. Siddhartha Chatterjee (Chairman), Shri Jiban Saha (Vice-Chairman), and Prof. (Dr.) Ashoke Mondal (Member Secretary), among other academic and industry members."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "administration",
+      "patterns": [
+        "Administration",
+        "Administrative staff",
+        "Who are the office staff?",
+        "College administration details"
+      ],
+      "responses": [
+        "Our administration team includes Mr. Sandip Saha, Mr. Pradip Kumar Das, Mr. Arijit Majumdar, Mr. Santasil Roy, Mr. Pintu Kundu, Mr. Avijit Das, Mr. Avik Sanyal, Mr. Bappa Majumder, Mr. Utpal Dastider, Ms. Chandrayee Biswas, Mr. Tanmoy Halder, Mr. Krishnadas Biswas, Mr. Amitabh Chakravorti, and Mr. Chinmay Ghoshal.",
+        "For full administrative contacts please visit https://rcciit.edu.in/administration."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "departments_offered",
+      "patterns": [
+        "What departments are in RCCIIT?",
+        "List of departments",
+        "Departments offered",
+        "How many departments does RCCIIT have?",
+        "Which branches are available?"
+      ],
+      "responses": [
+        "We offer the following departments and academic units: Computer Science and Engineering, Information Technology, Computer Science and Engineering (AI & ML), Electronics and Communication Engineering, Electrical Engineering, Computer Application, Computer Science, Applied Science, and Engineering Science & Management.",
+        "For department details and curriculam see https://rcciit.edu.in/departments."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admissions",
+      "patterns": [
+        "Admission process",
+        "How can I get admission?",
+        "Admission details",
+        "Admission to RCCIIT",
+        "When is admission open?",
+        "Tell me about admissions and eligibility."
+      ],
+      "responses": [
+        "Admissions are open for the 2026-27 academic session. We offer admission portals for B.Tech, M.Tech, MCA, and BCA, and provide online fee payment on our admissions page.",
+        "Please visit https://rcciit.edu.in/admissions for application procedures and deadlines."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "exam_dates",
+      "patterns": [
+        "What are the upcoming exam dates?",
+        "Exam dates",
+        "When are the exams?",
+        "Where can I find exam schedule?",
+        "Exam schedule"
+      ],
+      "responses": [
+        "We do not publish a fixed exam-date list here. Please check the latest official notices on https://rcciit.edu.in/notices for current exam updates.",
+        "For the latest exam schedule, please visit https://rcciit.edu.in/notices and contact the college office if you need confirmation."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "campus_help",
+      "patterns": [
+        "How do I find campus services and support?",
+        "Campus help",
+        "Campus services",
+        "Student support",
+        "How do I get support on campus?"
+      ],
+      "responses": [
+        "For campus services and support, please use the official website and contact page: https://rcciit.edu.in/ and https://rcciit.edu.in/contact. If you need a specific office, we can help route you.",
+        "Please check the official website for campus support details, or visit https://rcciit.edu.in/contact for the right office to reach."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "office_hours",
+      "patterns": [
+        "Share office hours and contact details.",
+        "Office hours",
+        "What are the office hours?",
+        "Working hours",
+        "Contact details"
+      ],
+      "responses": [
+        "We do not list fixed public office hours online — please check https://rcciit.edu.in/notices or contact us at +91 62908 21297 for current timings. For contact details, visit https://rcciit.edu.in/contact.",
+        "For the latest office timings and contact details, please check the official notices or contact page on https://rcciit.edu.in/."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "What is the college fee?",
+        "Tell me about the fee structure",
+        "Fee details for RCCIIT",
+        "How much is the fee?",
+        "What is the tuition fee?"
+      ],
+      "responses": [
+        "Please refer to our admissions and online fee payment portal for the latest fee structure.",
+        "Current fee details are available at https://rcciit.edu.in/fees — contact admissions for clarifications."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "Is scholarship available?",
+        "Scholarship details",
+        "What scholarships are offered?",
+        "Scholarship page",
+        "Fee waiver details"
+      ],
+      "responses": [
+        "Scholarship information and eligibility criteria are available on our scholarship page at https://rcciit.edu.in/scholarship.",
+        "Contact the admissions office or visit our scholarship page for details and application procedures."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "placements",
+      "patterns": [
+        "Placement",
+        "Which companies visit the college?",
+        "What is the placement record?",
+        "Recruitment details",
+        "Companies visiting RCCIIT"
+      ],
+      "responses": [
+        "Our placement records include companies such as TCS, Wipro, Virtusa, CTS, Hexaware, KIA, HTC, Infosys, Byju's, EPAM, BPR Infratec, Sundram Fasteners, Deloitte, and others. See our placement pages for recent campus recruitment updates.",
+        "Visit https://rcciit.edu.in/placements for placement statistics and company lists."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "What events are organized in college?",
+        "List of events conducted in college",
+        "Tell me about college events",
+        "What are the major events at RCCIIT?",
+        "Does RCCIIT have annual fests?"
+      ],
+      "responses": [
+        "Our Student Welfare Committee organizes events including GOT, TechTrix, Regalia, and Bihaan, along with academic, technical, and cultural activities.",
+        "For event calendars and participation details see https://rcciit.edu.in/events."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "notices",
+      "patterns": [
+        "General notice",
+        "Latest notices",
+        "College notices",
+        "Where can I find notices?"
+      ],
+      "responses": [
+        "We publish the latest institute notices in our General Notice section on https://rcciit.edu.in/notices.",
+        "Please check our notices page for current announcements and circulars."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "Is there a library?",
+        "Library facility",
+        "College library",
+        "Where is the library?",
+        "Tell me about the library"
+      ],
+      "responses": [
+        "Our Central Library is housed in a three-storied air-conditioned building and holds over 12,741 titles and 75,935 books, along with print journals, back volumes, and digital resources.",
+        "For library timings and services visit https://rcciit.edu.in/library."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "syllabus",
+      "patterns": [
+        "Syllabus for all years",
+        "Where can I find the syllabus?",
+        "Semester syllabus",
+        "Academic syllabus",
+        "Course syllabus"
+      ],
+      "responses": [
+        "Our syllabus and course outlines are available on the RCCIIT syllabus page: https://rcciit.edu.in/syllabus.",
+        "Please refer to the syllabus page for semester-wise curriculum and subject details."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_department",
+      "patterns": [
+        "CSE department",
+        "about CSE",
+        "CSE details",
+        "CSE information",
+        "Computer Science and Engineering"
+      ],
+      "responses": [
+        "Our Computer Science and Engineering department began in 1999 with an initial intake of 60 for B.Tech CSE; intake increased over the years and the M.Tech CSE program started in 2012.",
+        "For detailed department history and programs visit https://rcciit.edu.in/departments/cse."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_faculty",
+      "patterns": [
+        "CSE faculty details",
+        "CSE faculty information",
+        "list of CSE faculty",
+        "Lecturers in CSE department",
+        "CSE faculty list"
+      ],
+      "responses": [
+        "Our CSE faculty includes Prof. (Dr.) Minakshi Banerjee, Dr. Harinandan Tunga, Prof. (Dr.) Dipankar Majumdar, Mr. Rajib Saha, Mr. Jaydip Mukhopadhyay, Dr. Koushik Mallick, Mrs. Sukla Banerjee, Sk Mazharul Islam, Dr. Anup Kumar Kolya, Dr. Parama Bagchi, Mrs. Monika Singh, Mr. Somenath Nag Choudhury, Mr. Arup Kumar Bhattacharjee, Dr. Alokananda Dey, Mrs. Satabdwi Sarkar, Mr. Souvik Majumdar, Mr. Anirban Dey, Mrs. Priya Sen Purkait, Mr. Swapan Shakhari, Mr. Bishal Ghosh, Dr. Sohini Paul, Dr. Neelotpal Chakraborty, Dr. Abhishek Bal, Mr. Mehbub Rahaman Mondal, Mr. Deepam Gangopadhyay, Mrs. Priyanka Banerjee, Ms. Nasima Khatun, and Mr. Sayantan Chakrabarti.",
+        "See https://rcciit.edu.in/faculty/cse for full faculty profiles and contact details."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_hod",
+      "patterns": [
+        "Who is CSE HOD",
+        "CSE HOD",
+        "hod of cse",
+        "hod of computer science and engineering",
+        "name of CSE hod"
+      ],
+      "responses": [
+        "The CSE department page lists Dr. Parama Bagchi as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "it_department",
+      "patterns": [
+        "IT department",
+        "about IT",
+        "IT details",
+        "Information Technology department",
+        "IT information"
+      ],
+      "responses": [
+        "The Information Technology department started in 1999 with an AICTE approved intake of 60 students and the site describes it as one of the oldest departments of RCCIIT."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "it_faculty",
+      "patterns": [
+        "IT faculty details",
+        "IT faculty information",
+        "list of IT faculty",
+        "Lecturers in IT department",
+        "IT faculty list"
+      ],
+      "responses": [
+        "The IT faculty page lists Prof. (Dr.) Hrishikesh Bhaumik, Prof. (Dr.) Abhijit Das, Dr. Soumen Mukherjee, Dr. Hiranmoy Roy, Dr. Soumyadip Dhar, Mrs. Abantika Choudhury, Mrs. Moumita Deb, Mr. Jayanta Datta, Dr. Ranjan Jana, Dr. Pankaj Pal, Mr. Amit Khan, Mr. Sudarsan Biswas, Ms. Jayanti Das, Mrs. Ahana Patra, Mr. Indronil Mazumder, Mr. Dipan Bandyopadhyay, Dr. Srirupa Das, Mrs. Sharbari Kundu, Mr. Monojit Manna, and Mrs. Shreyasi Bhattacharya."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "it_hod",
+      "patterns": [
+        "Who is IT HOD",
+        "IT HOD",
+        "hod of it",
+        "HOD of information technology",
+        "name of IT hod"
+      ],
+      "responses": [
+        "The IT department page lists Dr. Soumyadip Dhar as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_ai_ml_department",
+      "patterns": [
+        "CSE AI ML department",
+        "about CSE AI ML",
+        "Computer Science and Engineering AI ML",
+        "AI ML branch",
+        "CSE Artificial Intelligence and Machine Learning"
+      ],
+      "responses": [
+        "The Computer Science and Engineering (AI & ML) department was introduced in the academic year 2023-2024 with an intake capacity of 60 students."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_ai_ml_faculty",
+      "patterns": [
+        "CSE AI ML faculty details",
+        "CSE AI ML faculty information",
+        "list of AI ML faculty",
+        "AI ML faculty list"
+      ],
+      "responses": [
+        "The AI & ML faculty page lists Prof. (Dr.) Indrajit Pan, Mr. Sujit Chakraborty, Mr. Palash Kumar Ghosh, and Dr. Subhrajit Sinha Roy."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cse_ai_ml_hod",
+      "patterns": [
+        "Who is AI ML HOD",
+        "CSE AI ML HOD",
+        "hod of cse ai ml",
+        "name of AI ML hod"
+      ],
+      "responses": [
+        "The CSE (AI & ML) department page lists Prof. (Dr.) Indrajit Pan as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ece_department",
+      "patterns": [
+        "ECE department",
+        "about ECE",
+        "ECE details",
+        "Electronics and Communication Engineering",
+        "ECE information"
+      ],
+      "responses": [
+        "The Electronics and Communication Engineering department has been running since 2006 and the site says its intake increased from 60 to 120 in 2010, with a 2-year full-time PG program in Tele Communication starting in 2012."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ece_faculty",
+      "patterns": [
+        "ECE faculty details",
+        "ECE faculty information",
+        "list of ECE faculty",
+        "ECE faculty list"
+      ],
+      "responses": [
+        "The ECE faculty page lists Prof. (Dr.) Ashoke Mondal, Ms. Arpita Banerjee (Roy), Dr. Abhishek Basu, Dr. Soham Sarkar, Dr. Pampa Debnath, Dr. Srijibendu Bagchi, Dr. Arpan Deyasi, Dr. Tiya Dey Malakar, Dr. Arpita Ghosh, Mrs. Saraswati Saha, Dr. Sujoy Mondal, Mr. Anindya Basu, Dr. Naiwrita Dey, Mr. Kalyan Biswas, Dr. Nandan Bhattacharyya, Dr. Joyeeta Basu Pal, Dr. Arijit Ghosh, Dr. Apu Mistry, Dr. Srikanta Acharya, and Dr. Avishek Paul."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ece_hod",
+      "patterns": [
+        "Who is ECE HOD",
+        "ECE HOD",
+        "hod of ece",
+        "name of ECE hod"
+      ],
+      "responses": [
+        "The ECE department page lists Dr. Pampa Debnath as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ee_department",
+      "patterns": [
+        "EE department",
+        "about EE",
+        "EE details",
+        "Electrical Engineering",
+        "EE information"
+      ],
+      "responses": [
+        "The Electrical Engineering department started in 2009, the site says it is NBA accredited, and the present intake is 60."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ee_faculty",
+      "patterns": [
+        "EE faculty details",
+        "EE faculty information",
+        "list of EE faculty",
+        "EE faculty list"
+      ],
+      "responses": [
+        "The EE faculty page lists Prof. (Dr.) Alok Kole, Prof. (Dr.) Debasish Mondal, Dr. Shilpi Bhattacharya Deb, Dr. Dipankar Santra, Mr. Nijam Uddin Molla, Mr. Budhaditya Biswas, Mr. Sarbojit Mukherjee, Dr. Subhasis Bandopadhyay, and Dr. Srijan Bhattacharya."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ee_hod",
+      "patterns": [
+        "Who is EE HOD",
+        "Electrical Engineering HOD",
+        "hod of electrical engineering",
+        "name of EE hod"
+      ],
+      "responses": [
+        "The Electrical Engineering department page lists Dr. Subhasis Bandopadhyay as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_application_department",
+      "patterns": [
+        "Computer Application department",
+        "about CA department",
+        "Computer Application details",
+        "CA information"
+      ],
+      "responses": [
+        "The Computer Application department started in 2000 and the site notes that many alumni work in IT companies while others pursue higher studies such as ME, M.Tech, MBA, and PhD."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_application_faculty",
+      "patterns": [
+        "CA faculty details",
+        "Computer Application faculty information",
+        "list of Computer Application faculty",
+        "CA faculty list"
+      ],
+      "responses": [
+        "The Computer Application faculty page lists Mr. Biswanath Chakraborty, Dr. Manas Ghosh, Dr. Pramit Ghosh, Mrs. Moumita Banerjee, Dr. Lidia Ghosh, and Mr. Subhasis Chowdhury."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_application_hod",
+      "patterns": [
+        "Who is CA HOD",
+        "Computer Application HOD",
+        "hod of computer application",
+        "name of CA hod"
+      ],
+      "responses": [
+        "The Computer Application department page lists Dr. Manas Ghosh as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_science_department",
+      "patterns": [
+        "Computer Science department",
+        "about CS department",
+        "Computer Science details",
+        "CS information"
+      ],
+      "responses": [
+        "The Computer Science department started its journey in 2021 and the site says it focuses on non-engineering degree programs."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_science_faculty",
+      "patterns": [
+        "CS faculty details",
+        "Computer Science faculty information",
+        "list of Computer Science faculty",
+        "CS faculty list"
+      ],
+      "responses": [
+        "The Computer Science faculty page lists Dr. Arindam Mondal, Mrs. Sudipta Dey, Mr. Falguni Adhikary, Mr. Swarup Kumar Paul, Mrs. Sulagna Basak, and Dr. Tasnima Yasmin."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "applied_science_department",
+      "patterns": [
+        "Applied Science department",
+        "about applied science",
+        "Applied Science details",
+        "AS information"
+      ],
+      "responses": [
+        "The Applied Science department page describes it as a supporting academic unit that helps engineering students build the foundation needed to apply science and mathematics in their fields."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "applied_science_faculty",
+      "patterns": [
+        "Applied Science faculty details",
+        "Applied Science faculty information",
+        "list of Applied Science faculty",
+        "Applied Science faculty list"
+      ],
+      "responses": [
+        "The Applied Science faculty page lists Dr. Papia Datta, Dr. Tathagata Deb, Dr. Kanchan Kumar Patra, Mr. Manoranjan Jana, Dr. Satarupa Chatterjee, Dr. Sangita Agarwal, Dr. Jahangir Chowdhury, Dr. Anirban Saha, Dr. Hiya Mandal, Dr. Kaushik Chattopadhyay, and Dr. Sukhendu Mukherjee."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "applied_science_hod",
+      "patterns": [
+        "Who is Applied Science HOD",
+        "Applied Science HOD",
+        "hod of applied science",
+        "name of applied science hod"
+      ],
+      "responses": [
+        "The Applied Science department page lists Dr. Jahangir Chowdhury as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "engineering_science_management_department",
+      "patterns": [
+        "Engineering Science and Management department",
+        "about ESM department",
+        "Engineering Science Management details",
+        "ESM information"
+      ],
+      "responses": [
+        "The Engineering Science & Management page says the department helps engineering students gain expertise through the knowledge imparted by its faculty."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "engineering_science_management_faculty",
+      "patterns": [
+        "Engineering Science and Management faculty details",
+        "ESM faculty information",
+        "list of ESM faculty",
+        "Engineering Science faculty list"
+      ],
+      "responses": [
+        "The Engineering Science & Management faculty page lists Dr. Sadhan Kumar Dey, Dr. Jhuma Ray, Ms. Anwesha Basu, Mr. Avijit Saha, Mr. Nitai Banerjee, Ms. Sohini Sen, Mr. Rahil Rameez, and Mr. Sourav Sil."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "engineering_science_management_hod",
+      "patterns": [
+        "Who is ESM HOD",
+        "Engineering Science and Management HOD",
+        "hod of engineering science and management",
+        "name of ESM hod"
+      ],
+      "responses": [
+        "The Engineering Science & Management page lists Dr. Jhuma Ray as the Head of the Department."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "sports and games",
+        "sports facilities",
+        "sports infrastructure",
+        "What sports are available?"
+      ],
+      "responses": [
+        "The site says the Physical Education Department supports sports and games facilities including volleyball, basketball, ball badminton, kabaddi, football, cricket, table tennis, athletics, gym, and an indoor stadium."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "student_achievements",
+      "patterns": [
+        "student achievements",
+        "placed students",
+        "alumni achievements",
+        "show student achievements"
+      ],
+      "responses": [
+        "The homepage highlights student achievements such as placements at Tavisca, BMC, and other companies across CSE, IT, and ECE."
+      ],
+      "context_set": ""
+    }
+  ]
+}

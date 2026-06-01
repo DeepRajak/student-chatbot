@@ -1,7 +1,8 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
+import { Inter, Space_Grotesk } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" })
 
 export const metadata = {
   title: "Khalpar IIT Chatbot",
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${spaceGrotesk.variable}`}>{children}</body>
     </html>
   )
 }
