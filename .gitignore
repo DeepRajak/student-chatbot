@@ -56,3 +56,11 @@ venv
 backend/nltk_data/
 backend/data.pth
 
+# Runtime logs (keep directory, not contents)
+backend/logs/
+
+# IDE / tooling metadata
+.claude/
+
+
+
