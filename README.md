@@ -14,7 +14,7 @@
 ---
 
 <p align="center">
-  <img src="screenshot.png" alt="RCCIIT Student Chatbot — App Screenshot" width="900" />
+  <img src="Chatbot Interface.png" alt="RCCIIT Student Chatbot — App Screenshot" width="900" />
 </p>
 
 ---
@@ -278,8 +278,8 @@ chatbotpy/
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/<your-username>/chatbotpy.git
-cd chatbotpy
+git clone https://github.com/<your-username>/student-chatbot.git
+cd student-chatbot
 ```
 
 ### 2. Set up the Python environment
