@@ -4,8 +4,9 @@
 import multiprocessing
 
 # --- Worker settings ---
-workers = multiprocessing.cpu_count() * 2 + 1   # recommended formula
-worker_class = "sync"                            # use "gevent" for SSE streaming in production
+workers = multiprocessing.cpu_count() * 2 + 1
+worker_class = "gevent"
+worker_connections = 1000   # max concurrent connections per gevent worker
 threads = 1
 timeout = 120                                    # long enough for NLP inference
 graceful_timeout = 30

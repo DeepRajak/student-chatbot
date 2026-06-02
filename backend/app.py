@@ -1,7 +1,10 @@
 import json
 import logging
 import os
+from dotenv import load_dotenv
 from flask import Flask, Response, request, jsonify
+
+load_dotenv()
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -30,6 +33,7 @@ limiter = Limiter(
     app=app,
     default_limits=["200 per day", "20 per minute"],
     storage_uri=RATELIMIT_URI,
+    storage_options={"socket_connect_timeout": 2, "socket_timeout": 2},
 )
 
 

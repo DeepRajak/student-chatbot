@@ -27,3 +27,27 @@
 {"ts": "2026-06-02T13:14:57+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 241}
 {"ts": "2026-06-02T13:16:22+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 241}
 {"ts": "2026-06-02T13:16:22+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 521}
+{"ts": "2026-06-02T13:34:31+00:00", "session_id": "redis-test", "message": "hello", "intent_tag": "greeting", "confidence": 1.0, "response_len": 90}
+{"ts": "2026-06-02T13:35:14+00:00", "session_id": "redis-test", "message": "hello", "intent_tag": "greeting", "confidence": 1.0, "response_len": 90}
+{"ts": "2026-06-02T13:35:14+00:00", "session_id": "redis-test", "message": "hello", "intent_tag": "greeting", "confidence": 1.0, "response_len": 90}
+{"ts": "2026-06-02T13:35:14+00:00", "session_id": "redis-test", "message": "hello", "intent_tag": "greeting", "confidence": 1.0, "response_len": 62}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:31+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:32+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
+{"ts": "2026-06-02T13:35:33+00:00", "session_id": "limit-test", "message": "test", "intent_tag": null, "confidence": 0.3956, "response_len": 294}
