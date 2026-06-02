@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useMemo, useRef, useState, memo } from "react"
-import { ArrowUp, Bot, Download, Menu, Mic, MicOff, Paperclip, Plus, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react"
+import { ArrowUp, Download, Menu, Mic, MicOff, Paperclip, Plus, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import ReactMarkdown from "react-markdown"
@@ -88,8 +88,8 @@ const MessageCard = memo(function MessageCard({ message, feedback, onFeedback, o
     <div className={`flex gap-3 w-full ${isUser ? "justify-end" : "items-start"}`}>
       {/* Bot avatar */}
       {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-[#1a365d] flex items-center justify-center shrink-0 mt-1 shadow-sm">
-          <Bot size={15} className="text-[#86a0cd]" />
+        <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 mt-1 shadow-sm">
+          <Image src={collegeLogo} alt="Bot" width={32} height={32} className="w-full h-full object-cover" />
         </div>
       )}
 
@@ -641,8 +641,8 @@ export default function Home() {
             {/* Welcome screen */}
             {messages.length === 0 && !isTyping && (
               <div className="flex flex-col items-center justify-center py-16 text-center select-none">
-                <div className="relative w-16 h-16 bg-[#1a365d] rounded-2xl flex items-center justify-center mb-4 shadow-md rotate-3 hover:rotate-0 transition-transform duration-300 cursor-default">
-                  <Bot size={30} className="text-[#86a0cd]" />
+                <div className="relative w-16 h-16 rounded-2xl overflow-hidden mb-4 shadow-md rotate-3 hover:rotate-0 transition-transform duration-300 cursor-default">
+                  <Image src={collegeLogo} alt="Bot" width={64} height={64} className="w-full h-full object-cover" />
                   <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full" />
                 </div>
                 <h2 className="text-xl font-semibold text-[#191c1e] font-[family:var(--font-display)]">
@@ -695,8 +695,8 @@ export default function Home() {
                   aria-label="Assistant is thinking"
                   className="flex gap-3 items-start"
                 >
-                  <div className="w-8 h-8 rounded-full bg-[#1a365d] flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <Bot size={15} className="text-[#86a0cd]" />
+                  <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 mt-1 shadow-sm">
+                    <Image src={collegeLogo} alt="Bot" width={32} height={32} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-white border border-[#c4c6cf] rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm">
                     <div className="flex items-center gap-1.5 h-5">
