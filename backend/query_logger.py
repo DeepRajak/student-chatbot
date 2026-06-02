@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Lightweight JSONL query logger (E9).
 Writes to backend/logs/queries.jsonl — rotate or ship this file for analytics.

@@ -1,0 +1,29 @@
+{"ts": "2026-06-02T01:22:02+00:00", "session_id": null, "message": "Hello, tell me about RCCIIT", "intent_tag": "departments_offered", "confidence": 0.9983, "response_len": 318}
+{"ts": "2026-06-02T01:25:39+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "Tell me about admissions and eligibility.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 169}
+{"ts": "2026-06-02T01:25:50+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "Tell me about admissions and eligibility.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 87}
+{"ts": "2026-06-02T01:26:29+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "Tell me about admissions and eligibility.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 87}
+{"ts": "2026-06-02T01:26:33+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "How do I find the faculty directory?", "intent_tag": "ece_faculty", "confidence": 0.9185, "response_len": 437}
+{"ts": "2026-06-02T01:28:31+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "Share office hours and contact details.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 204}
+{"ts": "2026-06-02T01:28:36+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "How do I find campus services and support?", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 131}
+{"ts": "2026-06-02T01:28:44+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "hi", "intent_tag": "greeting", "confidence": 0.9998, "response_len": 47}
+{"ts": "2026-06-02T01:29:00+00:00", "session_id": "748260e5-212f-4eb1-8f92-8700d4efe55a", "message": "What are the upcoming exam dates?", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 129}
+{"ts": "2026-06-02T01:33:40+00:00", "session_id": null, "message": "How do I find the faculty directory?", "intent_tag": "ece_faculty", "confidence": 0.9185, "response_len": 437}
+{"ts": "2026-06-02T01:35:04+00:00", "session_id": null, "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 625}
+{"ts": "2026-06-02T01:35:04+00:00", "session_id": null, "message": "ECE faculty list", "intent_tag": "ece_faculty", "confidence": 1.0, "response_len": 437}
+{"ts": "2026-06-02T02:07:32+00:00", "session_id": null, "message": "Library books available", "intent_tag": "library", "confidence": 1.0, "response_len": 69}
+{"ts": "2026-06-02T12:33:09+00:00", "session_id": null, "message": "What are the placement statistics?", "intent_tag": "placement_statistics", "confidence": 1.0, "response_len": 190}
+{"ts": "2026-06-02T12:33:17+00:00", "session_id": null, "message": "What are the placement statistics?", "intent_tag": "placement_statistics", "confidence": 1.0, "response_len": 190}
+{"ts": "2026-06-02T12:33:20+00:00", "session_id": null, "message": "hostel facility", "intent_tag": "hostel", "confidence": 1.0, "response_len": 183}
+{"ts": "2026-06-02T12:51:38+00:00", "session_id": "ba6d89e8-6334-4de9-b5ea-29831ef5c39a", "message": "Share office hours and contact details.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 127}
+{"ts": "2026-06-02T12:52:00+00:00", "session_id": "ba6d89e8-6334-4de9-b5ea-29831ef5c39a", "message": "waht are the departments", "intent_tag": "departments_offered", "confidence": 0.9999, "response_len": 76}
+{"ts": "2026-06-02T12:57:47+00:00", "session_id": "test-123", "message": "What are the upcoming exam dates?", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 129}
+{"ts": "2026-06-02T12:58:47+00:00", "session_id": "ba6d89e8-6334-4de9-b5ea-29831ef5c39a", "message": "Tell me about admissions and eligibility.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 169}
+{"ts": "2026-06-02T12:59:18+00:00", "session_id": "test", "message": "What are the upcoming exam dates?", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 146}
+{"ts": "2026-06-02T13:01:55+00:00", "session_id": "test", "message": "Tell me about admissions and eligibility.", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 169}
+{"ts": "2026-06-02T13:02:47+00:00", "session_id": "079a874e-ecf7-48fa-86df-c364b442de42", "message": "What are the latest placement statistics?", "intent_tag": "placement_statistics", "confidence": 1.0, "response_len": 331}
+{"ts": "2026-06-02T13:02:53+00:00", "session_id": "079a874e-ecf7-48fa-86df-c364b442de42", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 625}
+{"ts": "2026-06-02T13:03:57+00:00", "session_id": "test", "message": "hello", "intent_tag": "greeting", "confidence": 1.0, "response_len": 47}
+{"ts": "2026-06-02T13:05:36+00:00", "session_id": "test-sim", "message": "What are the upcoming exam dates?", "intent_tag": "direct_route", "confidence": 1.0, "response_len": 146}
+{"ts": "2026-06-02T13:14:57+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 241}
+{"ts": "2026-06-02T13:16:22+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 241}
+{"ts": "2026-06-02T13:16:22+00:00", "session_id": "fix-test", "message": "How do I find the faculty directory?", "intent_tag": "faculty_directory", "confidence": 1.0, "response_len": 521}

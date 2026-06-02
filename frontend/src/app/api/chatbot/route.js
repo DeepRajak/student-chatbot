@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 const BACKEND_URL = process.env.CHATBOT_BACKEND_URL || "http://localhost:5000"
 const TIMEOUT_MS  = parseInt(process.env.FETCH_TIMEOUT_MS || "30000", 10)
 
@@ -64,6 +66,7 @@ export async function POST(req) {
           "Content-Type": "text/event-stream",
           "Cache-Control": "no-cache, no-store",
           "Connection": "keep-alive",
+          "X-Accel-Buffering": "no",
         },
       })
     } else {

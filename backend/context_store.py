@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Session-based conversation context store (E2).
 In-memory; resets on server restart. Replace with Redis for persistence.

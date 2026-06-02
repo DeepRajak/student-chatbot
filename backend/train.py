@@ -49,16 +49,7 @@ def train_chatbot():
 
         # P1: build word_to_index once and pass it to every bag_of_words call
         word_to_index = {word: i for i, word in enumerate(all_words)}
-
-        # B11: rename inner loop vars to avoid shadowing outer `tag`
-        # B15: warn when model may underfit
-        if len(tags) > 30 and 16 < 64:
-            print(
-                f"Warning: {len(tags)} intent tags with hidden_size=16 may underfit. "
-                "Consider increasing hidden_size to 64 or more."
-            )
-
-        tag_to_index = {t: i for i, t in enumerate(tags)}
+        tag_to_index  = {t: i for i, t in enumerate(tags)}
 
         X_train = []
         y_train = []
@@ -71,12 +62,15 @@ def train_chatbot():
         X_train = np.array(X_train)
         y_train = np.array(y_train)
 
-        num_epochs = 2000
-        batch_size = 16
+        num_epochs = 3000
+        batch_size = 32
         learning_rate = 0.001
         input_size = len(X_train[0])
-        hidden_size = 16
+        hidden_size = 128   # Scaled up for 91 intents
         output_size = len(tags)
+
+        if len(tags) > 30 and hidden_size < 64:
+            print(f"Warning: {len(tags)} tags with hidden_size={hidden_size} may underfit.")
 
         dataset = ChatDataset(X_train, y_train)
         train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)

@@ -250,6 +250,36 @@
       "context_set": ""
     },
     {
+      "tag": "faculty_directory",
+      "patterns": [
+        "How do I find the faculty directory?",
+        "faculty directory",
+        "show me all faculty",
+        "list of all faculty",
+        "find faculty",
+        "faculty information",
+        "where can I find faculty",
+        "faculty list all departments",
+        "all faculty members",
+        "faculty overview",
+        "who are the faculty members",
+        "RCCIIT faculty",
+        "college faculty list",
+        "faculty details",
+        "all professors",
+        "teacher list",
+        "lecturers list",
+        "full faculty list",
+        "department faculty",
+        "faculty of RCCIIT"
+      ],
+      "responses": [
+        "RCCIIT has expert faculty across 8 departments. Here is an overview:\n\n- **CSE** — HoD: Dr. Parama Bagchi\n- **IT** — HoD: Dr. Soumyadip Dhar\n- **AI & ML (CSE)** — HoD: Prof. (Dr.) Indrajit Pan\n- **ECE** — HoD: Dr. Pampa Debnath\n- **EE** — HoD: Dr. Subhasis Bandopadhyay\n- **Computer Application** — HoD: Dr. Manas Ghosh\n- **Computer Science** — HoD: Dr. Arindam Mondal\n- **Applied Science** — HoD: Dr. Jahangir Chowdhury\n\nAsk me about any specific department for the full faculty list, e.g. \"CSE faculty\" or \"ECE faculty\".",
+        "RCCIIT faculty are spread across 8 departments. The departments include CSE, IT, AI & ML, ECE, EE, Computer Application, Computer Science, and Applied Science. Ask me about any specific department to get the complete list of faculty members!"
+      ],
+      "context_set": ""
+    },
+    {
       "tag": "admissions",
       "patterns": [
         "Admission process",
@@ -391,7 +421,15 @@
         "Library facility",
         "College library",
         "Where is the library?",
-        "Tell me about the library"
+        "Tell me about the library",
+        "Library books collection",
+        "How many books in library?",
+        "Tell me about the library",
+        "Library facility details",
+        "Library resources available",
+        "Central library RCCIIT",
+        "Library collection",
+        "Library journals"
       ],
       "responses": [
         "Our Central Library is housed in a three-storied air-conditioned building and holds over 12,741 titles and 75,935 books, along with print journals, back volumes, and digital resources.",
@@ -786,6 +824,687 @@
       ],
       "responses": [
         "The homepage highlights student achievements such as placements at Tavisca, BMC, and other companies across CSE, IT, and ECE."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "Is there a hostel?",
+        "Does RCCIIT have hostel facility?",
+        "Hostel accommodation",
+        "Where do students stay?",
+        "Is hostel available?",
+        "Hostel details",
+        "Hostel fees",
+        "On-campus accommodation",
+        "Student accommodation",
+        "Hostel rooms available?"
+      ],
+      "responses": [
+        "RCCIIT does not have an on-campus hostel. Students typically stay in private Paying Guest (PG) accommodations near the college in the Beleghata area. Approximate PG costs: 2-bed sharing ~₹3,500/month, 3-bed ~₹3,200/month, 4-bed ~₹3,000/month, 6-bed ~₹2,800/month.",
+        "There is no hostel on campus at RCCIIT. Most outstation students find PG accommodation nearby. Contact the college office or senior students for recommended PG options near Beleghata."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "transport",
+      "patterns": [
+        "Is there a college bus?",
+        "Transport facility",
+        "Bus service from RCCIIT",
+        "How to commute to college?",
+        "Does the college provide transport?",
+        "College bus routes",
+        "Transport service details",
+        "College transportation",
+        "Bus available for students"
+      ],
+      "responses": [
+        "RCCIIT provides college bus services covering major routes across Kolkata for students and staff. Please check the official notice board or contact the college office at +91 62908 21297 for current routes and timings.",
+        "College buses are available covering various Kolkata routes. For updated bus schedules and stops, visit https://rcciit.edu.in or contact the college office."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "canteen",
+      "patterns": [
+        "Is there a canteen?",
+        "College canteen",
+        "Food in college",
+        "Canteen facility",
+        "Where to eat in college?",
+        "Cafeteria at RCCIIT",
+        "Is food available in campus?",
+        "Canteen menu",
+        "College food facility"
+      ],
+      "responses": [
+        "Yes, RCCIIT has canteen facilities on both campuses providing cheap and hygienic food for students and staff during college hours.",
+        "Both RCCIIT campus blocks have canteens that serve affordable and hygienic meals. No prior booking is needed."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "btech_programs",
+      "patterns": [
+        "B.Tech programs at RCCIIT",
+        "What B.Tech courses are offered?",
+        "Undergraduate engineering programs",
+        "B.Tech branches",
+        "B.Tech seats and intake",
+        "How many seats in B.Tech?",
+        "B.Tech specializations",
+        "Engineering programs at RCCIIT",
+        "B.Tech courses available"
+      ],
+      "responses": [
+        "RCCIIT offers 4-year B.Tech programs:\n\n- **CSE** — 210 seats\n- **IT** — 120 seats\n- **ECE** — 120 seats\n- **EE** — 60 seats\n- **CSE (AI & ML)** — 60 seats\n\nTotal intake: 570 students per year. Admission is through WBJEE/JEE(Main) counseling by WBJEEB.",
+        "B.Tech programs: CSE (210 seats), IT (120), ECE (120), EE (60), CSE AI & ML (60). All 4-year AICTE-approved programs affiliated to MAKAUT."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "mtech_programs",
+      "patterns": [
+        "M.Tech programs",
+        "What M.Tech courses are offered?",
+        "Postgraduate engineering at RCCIIT",
+        "M.Tech admission",
+        "M.Tech specializations",
+        "M.Tech details",
+        "Master of Technology programs",
+        "PG engineering programs",
+        "M.Tech seats",
+        "GATE admission M.Tech"
+      ],
+      "responses": [
+        "RCCIIT offers 2-year M.Tech in three specializations:\n\n- **CSE** (Computer Science & Engineering)\n- **CSE (AI)** — Artificial Intelligence\n- **VLSI & Microelectronics**\n\nAdmission: GATE or PGET scores via MAKAUT counseling. GATE-qualified students receive MHRD scholarships. First semester fee: ₹59,100.",
+        "M.Tech at RCCIIT: three specializations (CSE, CSE-AI, VLSI & Microelectronics), 2 years, GATE/PGET based admission. First sem fee ₹59,100. Apply at https://admission.rcciit.org.in."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "mca_program",
+      "patterns": [
+        "MCA program",
+        "Master of Computer Applications",
+        "MCA admission",
+        "MCA details",
+        "MCA fees",
+        "MCA seats",
+        "MCA duration",
+        "MCA eligibility",
+        "Is MCA offered at RCCIIT?"
+      ],
+      "responses": [
+        "RCCIIT offers a 3-year MCA (Master of Computer Applications) with 90 seats.\n\n**Eligibility:** BCA/B.Sc. CS/IT with 50% marks (45% reserved), or B.Sc./B.Com./B.A. with Maths at 10+2 level.\n**Admission:** MAKAUT CET counseling.\n**First Semester Fee:** ₹98,675.\n**Portal:** https://admission.rcciit.org.in",
+        "MCA at RCCIIT: 3-year, 90-seat PG program. Eligible candidates need BCA or Maths background. Admission via MAKAUT CET; first sem fee is ₹98,675."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "bca_program",
+      "patterns": [
+        "BCA program",
+        "Bachelor of Computer Applications",
+        "BCA admission",
+        "BCA details",
+        "BCA fees",
+        "BCA seats",
+        "BCA duration",
+        "BCA eligibility",
+        "Is BCA offered at RCCIIT?"
+      ],
+      "responses": [
+        "RCCIIT offers a 4-year BCA (Bachelor of Computer Applications) with 60 seats.\n\n**Eligibility:** Passed or appearing in 10+2 under WBCHSE or equivalent.\n**First Semester Fee:** ₹61,150 (tuition ₹36,500 + caution ₹10,000 + other charges).\n**Total Program Fee:** ~₹3.46 lakhs.\n**Portal:** https://admission.rcciit.org.in",
+        "BCA: 4-year program, 60 seats, first sem fee ₹61,150. Eligible if you have passed or are appearing in Class 12. Apply at https://admission.rcciit.org.in."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fee_structure",
+      "patterns": [
+        "Fee structure",
+        "How much is the B.Tech fee?",
+        "Semester fee details",
+        "Annual fee of RCCIIT",
+        "Total course fee",
+        "Program-wise fee",
+        "Fee for each course",
+        "What is the fee for MCA?",
+        "What is the fee for BCA?",
+        "Course fees at RCCIIT",
+        "Fees for different programs",
+        "Tuition fee breakdown"
+      ],
+      "responses": [
+        "RCCIIT first semester fees:\n\n- **B.Tech** — ₹99,775\n- **M.Tech** — ₹59,100\n- **MCA** — ₹98,675\n- **BCA** — ₹61,150\n\nPlus a one-time refundable security deposit of ₹10,000. Total B.Tech cost ~₹5.94 lakhs. Visit https://rcciit.edu.in/fees for detailed breakdowns.",
+        "First semester fees: B.Tech ₹99,775 | M.Tech ₹59,100 | MCA ₹98,675 | BCA ₹61,150. Refundable security deposit ₹10,000 extra. Pay online at https://admission.rcciit.org.in."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_eligibility",
+      "patterns": [
+        "What is the eligibility for admission?",
+        "Admission eligibility criteria",
+        "Who can apply to RCCIIT?",
+        "Eligibility for B.Tech",
+        "Documents required for admission",
+        "What documents are needed for admission?",
+        "Admission requirements",
+        "Minimum marks for admission",
+        "Eligibility criteria for engineering"
+      ],
+      "responses": [
+        "**B.Tech Eligibility:** WBJEE/JEE(Main) qualification via WBJEEB counseling. Lateral entry (2nd year): Diploma in Engineering with min. 60% from AICTE-recognized polytechnic.\n\n**Required documents:** PI Report from WBJEE, Aadhar Card, Class X Admit Card/Birth Certificate, Class X & XII Marksheets, Caste Certificate (if applicable), Medical Certificate, Passport Photo, Signature, Anti-ragging affidavit from www.antiragging.in.",
+        "For B.Tech, you need a WBJEE or JEE(Main) rank. Required documents: Aadhar, Class 10 & 12 marksheets, medical certificate, passport photo, and anti-ragging declaration (www.antiragging.in). Apply at https://rcciit.edu.in/admissions."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "lateral_entry",
+      "patterns": [
+        "Lateral entry admission",
+        "Direct second year admission",
+        "Diploma to B.Tech admission",
+        "Lateral entry eligibility",
+        "Can I join second year directly?",
+        "Lateral entry process at RCCIIT",
+        "Diploma holders admission"
+      ],
+      "responses": [
+        "RCCIIT accepts lateral entry into the 2nd year of B.Tech for Diploma holders. Eligibility: Diploma in Engineering/Technology with minimum 60% marks from an AICTE-recognized polytechnic. Admission is through WBJEEB counseling. Visit https://rcciit.edu.in/admissions for details.",
+        "Diploma holders with at least 60% marks can apply for lateral entry into 2nd year B.Tech at RCCIIT. Process is handled by WBJEEB counseling. Contact admissions office for current schedule."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cutoff_ranks",
+      "patterns": [
+        "What is the cutoff rank for RCCIIT?",
+        "JEE cutoff for RCCIIT",
+        "WBJEE cutoff",
+        "Admission cutoff",
+        "Rank required for admission",
+        "Minimum rank for RCCIIT",
+        "Cutoff for CSE at RCCIIT",
+        "What rank do I need?"
+      ],
+      "responses": [
+        "Based on 2024 data, approximate B.Tech cutoff ranks for RCCIIT:\n- **JEE Main:** 22,495 – 99,788 (varies by branch & category)\n- **WBJEE:** varies by branch and category\n\nCSE has the most competitive cutoff, followed by IT and ECE. Check https://rcciit.edu.in/admissions or the WBJEEB portal for branch-wise and category-wise official cutoffs.",
+        "2024 cutoff range: JEE Main rank 22,495 to 99,788. Cutoffs vary by branch (CSE is most competitive) and category. For official data check https://rcciit.edu.in or the WBJEEB website."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "placement_statistics",
+      "patterns": [
+        "Placement statistics",
+        "What is the placement percentage?",
+        "Placement rate at RCCIIT",
+        "Average package at RCCIIT",
+        "Highest package at RCCIIT",
+        "Placement data",
+        "How many students get placed?",
+        "Salary package after RCCIIT",
+        "What are the latest placement stats?"
+      ],
+      "responses": [
+        "RCCIIT Placement Statistics (2024):\n\n- **Placement Rate:** 45.18%\n- **Total UG Offers:** 156\n- **Median Package:** ₹4.5 LPA (overall); ₹5.5 LPA (CSE/IT)\n- **Highest Package:** ₹14 LPA\n\nNotable: Tavisca (J.P. Morgan) at ₹13 LPA, BMC at ₹12.50 LPA. 30 EE/ECE students selected by Sundaram Fasteners (TVS) in a dedicated campus drive.",
+        "2024 placement highlights: 45.18% rate, highest ₹14 LPA, median ₹4.5 LPA. Top recruiters: BMC, TCS, Cognizant, Wipro, Infosys, Deloitte, IBM. Full report at https://rcciit.edu.in/placements."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "top_companies",
+      "patterns": [
+        "Which companies recruit from RCCIIT?",
+        "Top companies visiting RCCIIT",
+        "Companies for campus placement",
+        "What companies visit for placement?",
+        "MNCs recruiting from RCCIIT",
+        "Campus recruiters",
+        "Placement companies list",
+        "Which IT companies come to campus?"
+      ],
+      "responses": [
+        "Top companies recruiting from RCCIIT:\n\n**IT/Tech:** TCS, Wipro, Infosys, Cognizant, Tech Mahindra, IBM, Virtusa, Hexaware, EPAM, Byju's, BMC, Tavisca\n**Consulting/Finance:** Deloitte, PwC\n**Core/Manufacturing:** Sundaram Fasteners (TVS), KIA, HTC, BPR Infratec\n\nFull list at https://rcciit.edu.in/placements.",
+        "RCCIIT recruits from companies like TCS, Infosys, Wipro, IBM, Cognizant, Deloitte, BMC, Tavisca, and more. Sundaram Fasteners (TVS) conducted a West Bengal-exclusive campus drive at RCCIIT in 2025 selecting 30 students."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "iqac",
+      "patterns": [
+        "What is IQAC?",
+        "IQAC at RCCIIT",
+        "Internal Quality Assurance Cell",
+        "IQAC details",
+        "Who is the IQAC coordinator?",
+        "IQAC contact",
+        "Quality assurance at RCCIIT"
+      ],
+      "responses": [
+        "The IQAC (Internal Quality Assurance Cell) at RCCIIT is chaired by Principal Prof. (Dr.) Ashoke Mondal. Coordinator: Dr. Arpan Deyasi (Associate Professor, ECE). The cell ensures quality in teaching, research, and administration.\n\n**Email:** iqac@rcciit.org.in\n**Portal:** https://iqac.rcciit.org.in",
+        "IQAC oversees quality initiatives at RCCIIT, handling academic audits and AQAR reports. Coordinated by Dr. Arpan Deyasi. Contact: iqac@rcciit.org.in"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "anti_ragging",
+      "patterns": [
+        "Anti-ragging policy",
+        "What is the anti-ragging rule?",
+        "Ragging complaint",
+        "How to report ragging?",
+        "Anti-ragging committee",
+        "Is ragging a problem at RCCIIT?",
+        "Anti-ragging details",
+        "Ragging rules at RCCIIT"
+      ],
+      "responses": [
+        "RCCIIT has a strict zero-tolerance anti-ragging policy. The Anti-Ragging Squad conducts surprise raids 2–3 times per week. Ragging incidents: NIL. All students must submit an online affidavit at www.antiragging.in before joining.\n\n**Contact:** Mr. Sandip Saha (Registrar), +91 8334844489, sandip.saha@rcciit.org.in",
+        "Ragging is strictly prohibited at RCCIIT. Regular surprise checks are conducted. Students and parents must submit anti-ragging affidavits at www.antiragging.in. Report incidents to the Registrar at +91 8334844489."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "grievance",
+      "patterns": [
+        "How to file a grievance?",
+        "Grievance redressal",
+        "Student complaint",
+        "Complaint portal",
+        "Grievance portal",
+        "How to raise a complaint?",
+        "Grievance committee",
+        "Where to complain at RCCIIT?"
+      ],
+      "responses": [
+        "RCCIIT has an online Grievance Redressal portal at **https://grievance.rcciit.edu.in/**. Students, faculty, and staff can submit formal complaints through this portal. For urgent matters, contact the Registrar at sandip.saha@rcciit.org.in or +91 8334844489.",
+        "For grievances, use https://grievance.rcciit.edu.in/. RCCIIT has a formal redressal mechanism and takes all complaints seriously. You can also approach the administration office directly."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "nss",
+      "patterns": [
+        "NSS at RCCIIT",
+        "National Service Scheme",
+        "NSS details",
+        "How to join NSS?",
+        "NSS activities",
+        "NSS club",
+        "Social service at RCCIIT",
+        "Community service club"
+      ],
+      "responses": [
+        "The NSS (National Service Scheme) at RCCIIT was established in 2015. Activities include community service, environmental awareness, Women’s Day events, Fit India Challenge, and blood donation drives.\n\n**Website:** https://nss.rcciit.org.in/\n\nNSS builds social consciousness, leadership, and community spirit among students.",
+        "RCCIIT's NSS unit (est. 2015) runs Women's Day events, Fit India campaigns, environmental awareness programs, and community welfare activities. Website: https://nss.rcciit.org.in/"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "alumni",
+      "patterns": [
+        "Alumni network",
+        "RCCIIT alumni",
+        "How to register as alumni?",
+        "Alumni association",
+        "Alumni contact",
+        "Alumni portal",
+        "Alumni events",
+        "Past students of RCCIIT"
+      ],
+      "responses": [
+        "RCCIIT has 15,000+ alumni working globally. The alumni association organizes networking events, mentoring programs, and career support.\n\n**Register:** https://r.rccinstitute.org/alumni/registration.aspx\n**Email:** fic.alumni@rcciit.org.in\n**Alumni Portal:** https://almaconnect.com/\n**C2A Program** (Connect to Alumni) — helps current students interact with senior alumni.",
+        "RCCIIT alumni community: 15,000+ members worldwide. Register at https://r.rccinstitute.org/alumni/registration.aspx or email fic.alumni@rcciit.org.in. The C2A program connects current students with alumni for mentoring and career guidance."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "research",
+      "patterns": [
+        "Research at RCCIIT",
+        "Research opportunities",
+        "Research publications",
+        "Patents at RCCIIT",
+        "PhD at RCCIIT",
+        "Faculty research",
+        "Research projects",
+        "How to do research at RCCIIT?"
+      ],
+      "responses": [
+        "RCCIIT has an active research culture with SCOPUS-indexed publications, patents, and copyrights. The annual **DoSIH** (International Conference on Devices, Signals & Intelligent Research) is organized by the college. Funding from DST, UGC, and national agencies is available.\n\nResearch partnerships: VECC, IISc, ISI, IACS, SINP, BSNL, WEBEL, and international institutes in France and Italy.\n\n**Dean, Research & Innovation:** Prof. (Dr.) Indrajit Pan",
+        "Research at RCCIIT includes SCOPUS publications, patents, and DST/UGC-funded projects. The DoSIH international conference is held annually. For research guidance, contact Prof. Indrajit Pan (Dean, Research & Innovation)."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "student_clubs",
+      "patterns": [
+        "Student clubs at RCCIIT",
+        "What clubs are available?",
+        "GDSC at RCCIIT",
+        "Google Developer Student Club",
+        "IIC at RCCIIT",
+        "Institute Innovation Council",
+        "Student organizations",
+        "Extracurricular activities",
+        "Technical clubs",
+        "How to join a club?"
+      ],
+      "responses": [
+        "RCCIIT student clubs and organizations:\n\n- **GDSC** — Google Developer Student Club: coding, workshops, hackathons\n- **IIC** — Institute's Innovation Council: startups and innovation\n- **NSS** — National Service Scheme: community service\n- **Sports clubs** — volleyball, basketball, cricket, table tennis, gym\n- **Cultural clubs** — art, music, drama\n- **Student Welfare Committee** — organizes GOT, TechTrix, Regalia, Bihaan\n\nContact faculty coordinators for joining.",
+        "RCCIIT clubs: GDSC (tech/coding), IIC (innovation/startups), NSS (social service), sports teams, and cultural groups. Technical events (TechTrix) and cultural fests (Regalia) are organized by the Student Welfare Committee."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "tech_fest",
+      "patterns": [
+        "TechTrix",
+        "Technical fest at RCCIIT",
+        "Tech festival",
+        "Coding competition at RCCIIT",
+        "Hackathon at RCCIIT",
+        "Technical events at RCCIIT",
+        "Next tech fest",
+        "Annual tech event",
+        "Smart India Hackathon"
+      ],
+      "responses": [
+        "**TechTrix** is RCCIIT’s annual technical fest featuring coding contests, hackathons, robotics, paper presentations, and workshops. Organized by the Student Welfare Committee and department clubs.\n\nRCCIIT also participates in Smart India Hackathon (SIH). For schedule and registration, check https://rcciit.edu.in/events.",
+        "TechTrix is RCCIIT's flagship technical festival with programming contests, hackathons, project exhibitions, and quizzes. Check https://rcciit.edu.in/events for the upcoming edition."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cultural_fest",
+      "patterns": [
+        "Cultural fest at RCCIIT",
+        "Regalia fest",
+        "Bihaan fest",
+        "Annual cultural event",
+        "Annual fest",
+        "College festival",
+        "Cultural activities at RCCIIT",
+        "Dance and music events at RCCIIT",
+        "GOT fest"
+      ],
+      "responses": [
+        "RCCIIT cultural events:\n\n- **Regalia** — Annual cultural fest with music, dance, drama, and competitions\n- **Bihaan** — Major college celebration\n- **GOT** — Annual fest organized by the Student Welfare Committee\n\nSchedules at https://rcciit.edu.in/events.",
+        "Cultural life at RCCIIT includes Regalia (annual fest), Bihaan, and GOT, organized by the Student Welfare Committee. Events feature music, dance, drama, and competitions for all students."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "industrial_training",
+      "patterns": [
+        "Industrial training",
+        "Internship at RCCIIT",
+        "Summer training",
+        "Winter training",
+        "Where can I do internship?",
+        "Training programs for students",
+        "Industry internship",
+        "Vocational training at RCCIIT"
+      ],
+      "responses": [
+        "RCCIIT facilitates 4–6 week industrial training for 2nd to 4th year B.Tech students and final-year MCA students.\n\n**Partner organizations:** Cognizant, TCS, IBM, CMC (software), VECC, IISc, ISI, IACS, SINP, BSNL, WEBEL, BITM, and international institutes in France and Italy.\n\nInternship leads also available through the Training & Placement Cell: +91 9339204878.",
+        "Summer/winter training (4–6 weeks) for 2nd–4th year B.Tech. Partner companies: TCS, Cognizant, IBM, and research organizations. Contact T&P Cell at +91 9339204878 for opportunities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "library_timings",
+      "patterns": [
+        "Library timings",
+        "When does the library open?",
+        "Library hours",
+        "Library schedule",
+        "Library opening time",
+        "Book issue from library",
+        "Library contact"
+      ],
+      "responses": [
+        "RCCIIT Central Library Timings:\n\n- **Reading Room & Reference Section:** 9:00 AM – 7:00 PM\n- **Lending Section:** 10:30 AM – 5:30 PM\n- **Overnight Book Issue:** After 4:00 PM\n- **Photocopying:** 10:30 AM – 5:30 PM\n\n**Librarian:** Mrs. Debolina Mukherjee\n**Email:** rcciitlibrary@gmail.com\n\nDigital access to IEEE, SCOPUS, INFLIBNET, and NDLI resources is also available.",
+        "Library hours: Reading Room 9 AM–7 PM, Lending Section 10:30 AM–5:30 PM, Overnight issue after 4 PM. Contact: rcciitlibrary@gmail.com"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "online_portals",
+      "patterns": [
+        "Online portals of RCCIIT",
+        "RCCIIT student portal",
+        "Exam portal",
+        "Online admission portal",
+        "Where to check results?",
+        "Exam results portal",
+        "Online resources for students",
+        "College website portals",
+        "Student login portal",
+        "RCCIIT online services"
+      ],
+      "responses": [
+        "RCCIIT online portals:\n\n- **Admission:** https://admission.rcciit.org.in\n- **Exam / Results:** https://exam.rcciit.edu.in/signin\n- **Grievance:** https://grievance.rcciit.edu.in\n- **IQAC:** https://iqac.rcciit.org.in\n- **Library Repository:** repository.rcciit.edu.in\n- **NSS:** https://nss.rcciit.org.in\n- **Alumni:** https://almaconnect.com\n- **Official Website:** https://rcciit.edu.in",
+        "Key portals: Admission (admission.rcciit.org.in), Exam results (exam.rcciit.edu.in), Grievance (grievance.rcciit.edu.in), IQAC (iqac.rcciit.org.in), Library (repository.rcciit.edu.in), Alumni (almaconnect.com). Main site: https://rcciit.edu.in."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "accreditation_details",
+      "patterns": [
+        "NAAC score of RCCIIT",
+        "NBA accredited programs",
+        "Which programs are NBA accredited?",
+        "NAAC grade of RCCIIT",
+        "Accreditation validity",
+        "Is CSE NBA accredited?",
+        "Is IT NBA accredited?",
+        "Autonomous college details",
+        "UGC autonomous status"
+      ],
+      "responses": [
+        "RCCIIT Accreditation Status:\n\n- **NAAC Score:** 2.94 (first cycle)\n- **UGC Autonomous Status:** Granted\n- **NBA Accredited (till 30.06.2028):** B.Tech CSE, IT, ECE\n- **NBA Accredited (till 30.06.2027):** B.Tech Electrical Engineering\n- **AICTE Approved:** All programs\n- **University Affiliation:** MAKAUT, West Bengal",
+        "RCCIIT holds NAAC accreditation (score 2.94), UGC autonomous status, and NBA accreditation for CSE/IT/ECE (till 2028) and EE (till 2027). All programs AICTE-approved and affiliated to MAKAUT."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "affiliating_university",
+      "patterns": [
+        "Which university is RCCIIT affiliated to?",
+        "MAKAUT affiliation",
+        "University of RCCIIT",
+        "Degree from which university?",
+        "Affiliated university of RCCIIT",
+        "RCCIIT university name"
+      ],
+      "responses": [
+        "RCCIIT is affiliated to **MAKAUT** (Maulana Abul Kalam Azad University of Technology), West Bengal. All degrees — B.Tech, M.Tech, MCA, and BCA — are awarded by MAKAUT. The college also holds UGC autonomous status.",
+        "RCCIIT's affiliating university is MAKAUT (Maulana Abul Kalam Azad University of Technology, West Bengal). Degrees across all programs are awarded under the MAKAUT framework."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "registrar",
+      "patterns": [
+        "Who is the registrar?",
+        "Registrar contact",
+        "Registrar email",
+        "How to contact the registrar?",
+        "Registrar of RCCIIT",
+        "Office registrar details"
+      ],
+      "responses": [
+        "Registrar of RCCIIT: **Mr. Sandip Saha**\n\n**Phone:** +91 8334844489\n**Email:** sandip.saha@rcciit.org.in\n\nFor administrative queries, anti-ragging complaints, and office matters, contact the registrar's office.",
+        "Registrar: Mr. Sandip Saha | +91 8334844489 | sandip.saha@rcciit.org.in. He also manages the anti-ragging committee and administrative operations."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "campus_info",
+      "patterns": [
+        "How big is the campus?",
+        "Campus size",
+        "RCCIIT campus area",
+        "Number of students at RCCIIT",
+        "How many students study here?",
+        "Total students at RCCIIT",
+        "Campus facilities overview",
+        "Eco-friendly campus",
+        "Faculty count at RCCIIT",
+        "RCCIIT facts and figures"
+      ],
+      "responses": [
+        "RCCIIT Key Facts:\n\n- **Campus:** 4.63–5 acres, eco-friendly, two adjacent blocks in Beleghata\n- **Total Students:** ~2,000\n- **Total Faculty:** 189\n- **Student-Faculty Ratio:** 1:15\n- **Established:** 1999\n- **Facilities:** Digital classrooms, computer labs, central library (33,100+ volumes), canteen, sports complex",
+        "RCCIIT is a 4.63-acre eco-friendly campus in Beleghata, Kolkata with ~2,000 students, 189 faculty, and a 1:15 student-faculty ratio. Established in 1999, it has modern labs, a large library, canteen, and sports facilities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fee_payment",
+      "patterns": [
+        "How to pay college fees?",
+        "Fee payment process",
+        "Online fee payment",
+        "Bank details for fee payment",
+        "Payment methods accepted",
+        "How to pay admission fees?",
+        "NEFT details for RCCIIT",
+        "Fee payment portal",
+        "HDFC bank RCCIIT"
+      ],
+      "responses": [
+        "Fee payment at RCCIIT is done online via https://admission.rcciit.org.in.\n\n**Bank:** HDFC Bank, Beliaghata Branch\n**Account No.:** 50100437201466\n**IFSC:** HDFC0009114\n**Payee:** RCC INSTITUTE OF TECHNOLOGY\n\n**Accepted:** Online, NEFT (keep UTR number), DD/PO. Cash and cheques are NOT accepted.",
+        "Pay fees at https://admission.rcciit.org.in. NEFT: HDFC Bank A/C 50100437201466, IFSC HDFC0009114, payable to 'RCC INSTITUTE OF TECHNOLOGY'. Always save the UTR number after NEFT payment."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "scholarship_details",
+      "patterns": [
+        "What scholarships are available at RCCIIT?",
+        "Merit scholarship",
+        "SVMCM scholarship",
+        "Swami Vivekananda scholarship",
+        "Scholarship for toppers",
+        "Fee waiver for JEE toppers",
+        "GATE scholarship",
+        "Financial aid for students",
+        "How to get scholarship at RCCIIT?"
+      ],
+      "responses": [
+        "Scholarships at RCCIIT:\n\n1. **Merit Scholarship (JEE/WBJEE Toppers):**\n   - Rank 1–10: 100% tuition fee waiver\n   - Rank 11–20: 50% tuition fee waiver\n\n2. **GATE Qualified (M.Tech):** MHRD Government of India scholarship\n\n3. **SVMCM (Swami Vivekananda Merit-cum-Means):**\n   - For meritorious economically weaker students\n   - Family income limit: ₹2,50,000/year\n   - Monthly support: ₹1,000–₹8,000 depending on course level\n\nVisit https://rcciit.edu.in/scholarship for eligibility and application.",
+        "RCCIIT scholarships: 100% tuition fee waiver for top 10 JEE/WBJEE rankers, 50% for ranks 11–20; MHRD GATE scholarship for M.Tech; and state SVMCM scholarship for economically weaker meritorious students. See https://rcciit.edu.in/scholarship."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ndli",
+      "patterns": [
+        "NDLI club",
+        "National Digital Library",
+        "Digital library resources",
+        "Free online books RCCIIT",
+        "NDLI at RCCIIT",
+        "Online study materials RCCIIT",
+        "Free digital books"
+      ],
+      "responses": [
+        "RCCIIT launched its **NDLI Club** (National Digital Library of India) on February 9, 2023. It provides 24/7 free access to millions of study materials across all academic levels and subjects in multiple Indian languages.\n\nSupported by the Ministry of Education (National Mission on Education through ICT). Access: https://ndl.iitkgp.ac.in/",
+        "The NDLI Club at RCCIIT (est. Feb 9, 2023) gives students 24/7 access to free books, journals, and study materials via the National Digital Library. Visit https://ndl.iitkgp.ac.in/ using your institute credentials."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computer_science_hod",
+      "patterns": [
+        "Who is CS HOD",
+        "Computer Science HOD",
+        "hod of computer science",
+        "name of CS hod",
+        "Head of Computer Science department",
+        "CS department head"
+      ],
+      "responses": [
+        "The Computer Science department Head of Department is Dr. Arindam Mondal."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how_to_apply",
+      "patterns": [
+        "How to apply to RCCIIT?",
+        "Application process",
+        "Online application",
+        "How to fill admission form?",
+        "RCCIIT application portal",
+        "Steps to apply",
+        "Apply for B.Tech",
+        "Apply for MCA",
+        "Apply for BCA",
+        "Admission process step by step"
+      ],
+      "responses": [
+        "Steps to apply to RCCIIT:\n\n1. Visit **https://admission.rcciit.org.in**\n2. Register and fill personal & academic details\n3. Upload documents (Aadhar, marksheets, photo, medical certificate, anti-ragging affidavit from www.antiragging.in)\n4. Pay admission fee online (NEFT / payment gateway)\n5. Save the payment UTR number\n\nFor B.Tech: First complete WBJEEB counseling based on your WBJEE/JEE(Main) rank.",
+        "Apply at https://admission.rcciit.org.in. For B.Tech, complete WBJEEB counseling first. Upload documents (marksheets, Aadhar, anti-ragging affidavit from www.antiragging.in) and pay fees online."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "administration_contacts",
+      "patterns": [
+        "Dean of RCCIIT",
+        "Who is the dean?",
+        "Academic dean",
+        "Dean of research",
+        "Who to contact for academic matters?",
+        "Administration contact details",
+        "Key contacts at RCCIIT",
+        "Important contacts RCCIIT"
+      ],
+      "responses": [
+        "Key RCCIIT contacts:\n\n- **Principal In-Charge:** Prof. (Dr.) Ashoke Mondal\n- **Registrar:** Mr. Sandip Saha (+91 8334844489, sandip.saha@rcciit.org.in)\n- **Dean, Research & Innovation:** Prof. (Dr.) Indrajit Pan\n- **IQAC Coordinator:** Dr. Arpan Deyasi (iqac@rcciit.org.in)\n- **Admissions:** admission@rcciit.org.in\n- **Library:** rcciitlibrary@gmail.com\n- **Alumni:** fic.alumni@rcciit.org.in\n- **Main Office:** +91 62908 21297",
+        "Contact: Principal Prof. Ashoke Mondal; Registrar Mr. Sandip Saha (+91 8334844489); Dean Research Prof. Indrajit Pan; IQAC Dr. Arpan Deyasi (iqac@rcciit.org.in); Admissions admission@rcciit.org.in; Main: +91 62908 21297."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "training_placement_cell",
+      "patterns": [
+        "Training and placement cell",
+        "T&P cell",
+        "Placement cell contact",
+        "Who handles placements?",
+        "Training and placement details",
+        "Placement office contact",
+        "How does placement work at RCCIIT?"
+      ],
+      "responses": [
+        "The Training & Placement Cell at RCCIIT coordinates all campus recruitment activities including:\n\n- Mock interviews for pre-final year students\n- Career counseling, seminars, and webinars\n- Networking events with industry professionals\n- Coordination with recruiting companies\n\n**Contact:** +91 9339204878 / +91 9830767160",
+        "RCCIIT's T&P Cell handles campus drives, mock interviews, career counseling, and industry networking. Contact: +91 9339204878 or +91 9830767160. Visit https://rcciit.edu.in/placements for company and placement info."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "wbjee_admission",
+      "patterns": [
+        "How does WBJEE admission work?",
+        "WBJEE process for RCCIIT",
+        "WBJEEB counseling",
+        "JEE Main admission process",
+        "State level exam admission",
+        "How to get into RCCIIT through WBJEE?",
+        "Rank based admission"
+      ],
+      "responses": [
+        "B.Tech admission to RCCIIT is through the **WBJEEB (West Bengal Joint Entrance Examinations Board)** counseling process:\n\n1. Appear in WBJEE or JEE(Main)\n2. Register on the WBJEEB portal (wbjeeb.nic.in)\n3. Fill choices and lock preferences\n4. Allotment is based on rank and category\n5. Report to RCCIIT with documents and complete the admission at https://admission.rcciit.org.in\n\nFor the latest counseling schedule, visit wbjeeb.nic.in.",
+        "RCCIIT B.Tech admission is through WBJEEB counseling based on WBJEE or JEE(Main) rank. After seat allotment, complete admission at https://admission.rcciit.org.in with required documents."
       ],
       "context_set": ""
     }
