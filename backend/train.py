@@ -7,6 +7,7 @@ from torch.utils.data import Dataset, DataLoader
 from nltk_utils import bag_of_words, tokenize, lemmatize, ensure_nltk_data
 from model import NeuralNet
 
+
 class ChatDataset(Dataset):
     def __init__(self, X_train, y_train):
         self.n_samples = len(X_train)
@@ -19,68 +20,77 @@ class ChatDataset(Dataset):
     def __len__(self):
         return self.n_samples
 
+
 def train_chatbot():
     try:
         ensure_nltk_data(allow_download=True)
 
-        # Load intents
-        intents_path = Path(__file__).resolve().parent / 'intents.json'
-        with open(intents_path, 'r', encoding='utf-8') as f:
+        # H6: use absolute path so training works from any directory
+        intents_path = Path(__file__).resolve().parent / "intents.json"
+        with open(intents_path, "r", encoding="utf-8") as f:
             intents = json.load(f)
 
-        # Initialize lists
         all_words = []
         tags = []
         xy = []
 
-        # Process patterns and tags
-        for intent in intents['intents']:
-            tag = intent['tag']
+        for intent in intents["intents"]:
+            tag = intent["tag"]
             tags.append(tag)
-            for pattern in intent['patterns']:
+            for pattern in intent["patterns"]:
                 w = tokenize(pattern)
                 all_words.extend(w)
                 xy.append((w, tag))
 
-        # Preprocess words
-        ignore_words = ['?', '.', '!', ',', ';', ':']
+        ignore_words = ["?", ".", "!", ",", ";", ":"]
         all_words = [lemmatize(w) for w in all_words if w not in ignore_words]
         all_words = sorted(set(all_words))
         tags = sorted(set(tags))
-        tag_to_index = {tag: i for i, tag in enumerate(tags)}
 
-        # Create training data
+        # P1: build word_to_index once and pass it to every bag_of_words call
+        word_to_index = {word: i for i, word in enumerate(all_words)}
+
+        # B11: rename inner loop vars to avoid shadowing outer `tag`
+        # B15: warn when model may underfit
+        if len(tags) > 30 and 16 < 64:
+            print(
+                f"Warning: {len(tags)} intent tags with hidden_size=16 may underfit. "
+                "Consider increasing hidden_size to 64 or more."
+            )
+
+        tag_to_index = {t: i for i, t in enumerate(tags)}
+
         X_train = []
         y_train = []
 
-        for (pattern_sentence, tag) in xy:
-            bag = bag_of_words(pattern_sentence, all_words)
+        for (pattern_sent, pattern_tag) in xy:
+            bag = bag_of_words(pattern_sent, all_words, word_to_index=word_to_index)
             X_train.append(bag)
-            y_train.append(tag_to_index[tag])
+            y_train.append(tag_to_index[pattern_tag])
 
         X_train = np.array(X_train)
         y_train = np.array(y_train)
 
-        # Hyperparameters
-        num_epochs = 2000  # Increased epochs
-        batch_size = 16   # Increased batch size
+        num_epochs = 2000
+        batch_size = 16
         learning_rate = 0.001
         input_size = len(X_train[0])
-        hidden_size = 16  # Increased hidden size
+        hidden_size = 16
         output_size = len(tags)
 
-        # Create dataset and dataloader
         dataset = ChatDataset(X_train, y_train)
         train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)
 
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        # B6: guard against division by zero on empty DataLoader
+        if len(train_loader) == 0:
+            raise RuntimeError("No training batches available. Check that intents.json has patterns.")
+
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
-        # Loss and optimizer
         criterion = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-        # Training loop
         print("Training started...")
         loss = None
         for epoch in range(num_epochs):
@@ -89,6 +99,7 @@ def train_chatbot():
                 words = words.to(device)
                 labels = labels.to(dtype=torch.long).to(device)
 
+                # M3: zero_grad before forward pass (standard PyTorch order)
                 optimizer.zero_grad()
                 outputs = model(words)
                 loss = criterion(outputs, labels)
@@ -99,12 +110,12 @@ def train_chatbot():
 
             if (epoch + 1) % 100 == 0:
                 avg_loss = total_loss / len(train_loader)
-                print(f'Epoch [{epoch+1}/{num_epochs}], Average Loss: {avg_loss:.4f}')
+                print(f"Epoch [{epoch+1}/{num_epochs}], Average Loss: {avg_loss:.4f}")
 
         if loss is not None:
-            print(f'Final loss: {loss.item():.4f}')
+            print(f"Final loss: {loss.item():.4f}")
         else:
-            print('No batches were processed during training.')
+            print("No batches were processed during training.")
 
         data = {
             "model_state": model.state_dict(),
@@ -112,17 +123,18 @@ def train_chatbot():
             "hidden_size": hidden_size,
             "output_size": output_size,
             "all_words": all_words,
-            "tags": tags
+            "tags": tags,
         }
 
-        FILE = Path(__file__).resolve().parent / 'data.pth'
+        FILE = Path(__file__).resolve().parent / "data.pth"
         torch.save(data, FILE)
-        print(f'Training complete. Model saved to {FILE}')
+        print(f"Training complete. Model saved to {FILE}")
         return True
 
     except Exception as e:
-        print(f"Error during training: {str(e)}")
+        print(f"Error during training: {e}")
         return False
+
 
 if __name__ == "__main__":
     train_chatbot()

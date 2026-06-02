@@ -1,0 +1,25 @@
+{
+  "name": "RCCIIT Student Chatbot",
+  "short_name": "RCCIIT Bot",
+  "description": "AI-powered assistant for RCCIIT students — admissions, exams, campus, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#22d3ee",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/college-logo.PNG",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/college-logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "utilities"],
+  "lang": "en"
+}

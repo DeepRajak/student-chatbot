@@ -5,3 +5,10 @@ gunicorn>=22.0.0
 numpy>=1.26.0
 torch>=2.2.0
 nltk>=3.8.1
+
+# Optional: semantic similarity layer (E13) — large download ~500 MB
+# sentence-transformers>=3.0.0
+
+# Development & testing
+pytest>=8.0.0
+pytest-mock>=3.0.0
