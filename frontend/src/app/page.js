@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState, memo } from "react"
 import { Bot, BotMessageSquare, Clock3, Mic, MicOff, RefreshCcw, Send, Sparkles, SquarePen, User, Volume2, VolumeX } from "lucide-react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
@@ -17,12 +17,8 @@ const createMessage = (type, content) => ({
 })
 
 const STORAGE_KEY = "chatbot-conversation-v1"
-const DEFAULT_WELCOME = [
-  createMessage(
-    "bot",
-    "Welcome to the Khalpar IIT assistant. Ask about admissions, courses, exams, campus services, or anything else you want to find quickly."
-  ),
-]
+// REMARK_PLUGINS hoisted to module level — prevents new array allocation on every render
+const REMARK_PLUGINS = [remarkGfm]
 
 const quickPrompts = [
   { label: "Admissions", icon: "sparkles", prompt: "Tell me about admissions and eligibility." },
@@ -35,67 +31,77 @@ function formatTimestamp(timestamp) {
   return new Date(timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
 }
 
-function MarkdownMessage({ children, onLinkSpeak }) {
+// Static components hoisted outside render — only `a` is dynamic (needs onLinkSpeak)
+const STATIC_MD_COMPONENTS = {
+  p: ({ node, ...props }) => <p className="leading-7 text-sm sm:text-[0.95rem]" {...props} />,
+  strong: ({ node, ...props }) => <strong className="font-semibold text-white" {...props} />,
+  ul: ({ node, ...props }) => <ul className="ml-5 list-disc space-y-2 text-sm sm:text-[0.95rem]" {...props} />,
+  ol: ({ node, ...props }) => <ol className="ml-5 list-decimal space-y-2 text-sm sm:text-[0.95rem]" {...props} />,
+  li: ({ node, ...props }) => <li className="leading-7" {...props} />,
+  // `inline` prop removed in react-markdown v9; detect block code by className or multiline content
+  code: ({ node, className, children, ...props }) => {
+    const isBlock = /language-\w+/.test(className || "") || String(children).includes("\n")
+    return isBlock ? (
+      <code className="block overflow-x-auto rounded-2xl border border-white/10 bg-slate-950/80 p-3 text-xs text-slate-100" {...props}>
+        {children}
+      </code>
+    ) : (
+      <code className="rounded-full border border-white/10 bg-white/10 px-1.5 py-0.5 text-[0.8rem] text-cyan-100" {...props}>
+        {children}
+      </code>
+    )
+  },
+}
+
+const MarkdownMessage = memo(function MarkdownMessage({ children, onLinkSpeak }) {
+  const components = useMemo(() => ({
+    ...STATIC_MD_COMPONENTS,
+    a: ({ node, href, children: linkChildren, ...props }) => (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-cyan-300 underline decoration-cyan-400/40 underline-offset-4 transition hover:text-cyan-200"
+        onClick={() => onLinkSpeak?.(href)}
+        {...props}
+      >
+        {linkChildren}
+      </a>
+    ),
+  }), [onLinkSpeak])
+
   return (
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      components={{
-        p: ({ node, ...props }) => <p className="leading-7 text-sm sm:text-[0.95rem]" {...props} />,
-        strong: ({ node, ...props }) => <strong className="font-semibold text-white" {...props} />,
-        a: ({ href, children, ...props }) => (
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-cyan-300 underline decoration-cyan-400/40 underline-offset-4 transition hover:text-cyan-200"
-            onClick={() => onLinkSpeak?.(href)}
-            {...props}
-          >
-            {children}
-          </a>
-        ),
-        ul: ({ node, ...props }) => <ul className="ml-5 list-disc space-y-2 text-sm sm:text-[0.95rem]" {...props} />,
-        ol: ({ node, ...props }) => <ol className="ml-5 list-decimal space-y-2 text-sm sm:text-[0.95rem]" {...props} />,
-        li: ({ node, ...props }) => <li className="leading-7" {...props} />,
-        code: ({ inline, children, ...props }) =>
-          inline ? (
-            <code className="rounded-full border border-white/10 bg-white/10 px-1.5 py-0.5 text-[0.8rem] text-cyan-100" {...props}>
-              {children}
-            </code>
-          ) : (
-            <code className="block overflow-x-auto rounded-2xl border border-white/10 bg-slate-950/80 p-3 text-xs text-slate-100" {...props}>
-              {children}
-            </code>
-          ),
-      }}
-    >
+    <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
       {children}
     </ReactMarkdown>
   )
+})
+
+const QUICK_ICON_MAP = {
+  sparkles: <Sparkles size={14} />,
+  clock: <Clock3 size={14} />,
+  bot: <BotMessageSquare size={14} />,
+  pen: <SquarePen size={14} />,
 }
 
 function QuickPromptButton({ label, icon, onClick }) {
-  const iconMap = {
-    sparkles: <Sparkles size={14} />,
-    clock: <Clock3 size={14} />,
-    bot: <BotMessageSquare size={14} />,
-    pen: <SquarePen size={14} />,
-  }
-
   return (
     <button
       type="button"
       onClick={onClick}
       className="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/10 hover:text-white"
     >
-      <span className="text-cyan-300 transition group-hover:text-cyan-200">{iconMap[icon]}</span>
+      <span className="text-cyan-300 transition group-hover:text-cyan-200">{QUICK_ICON_MAP[icon]}</span>
       {label}
     </button>
   )
 }
 
 export default function Home() {
-  const [messages, setMessages] = useState(DEFAULT_WELCOME)
+  // Lazy initializer — prevents module-level Date/UUID from causing SSR hydration mismatch
+  const [messages, setMessages] = useState(() => [
+    createMessage("bot", "Welcome to the RCCIIT assistant. Ask about admissions, courses, exams, campus services, or anything else you want to find quickly."),
+  ])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [isTyping, setIsTyping] = useState(false)
@@ -104,18 +110,20 @@ export default function Home() {
   const [speechEnabled, setSpeechEnabled] = useState(false)
   const [lastFailedPrompt, setLastFailedPrompt] = useState("")
   const [hydrated, setHydrated] = useState(false)
+  const [isOnline, setIsOnline] = useState(true)
+  const [voiceError, setVoiceError] = useState("")
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
   const recognitionRef = useRef(null)
+  const abortControllerRef = useRef(null)
 
   const conversationSummary = useMemo(() => {
-    const userCount = messages.filter((message) => message.type === "user").length
-    const botCount = messages.filter((message) => message.type === "bot").length
-    return {
-      total: messages.length,
-      userCount,
-      botCount,
-    }
+    const counts = messages.reduce((acc, m) => {
+      if (m.type === "user") acc.userCount++
+      else acc.botCount++
+      return acc
+    }, { userCount: 0, botCount: 0 })
+    return { total: messages.length, ...counts }
   }, [messages])
 
   useEffect(() => {
@@ -144,65 +152,58 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    if (!hydrated || typeof window === "undefined") {
-      return
-    }
-
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
-    } catch (error) {
-      console.warn("Unable to persist conversation history", error)
-    }
+    if (!hydrated || typeof window === "undefined") return
+    // Debounce writes — avoids blocking the main thread on every keystroke-triggered re-render
+    const timer = setTimeout(() => {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages.slice(-100)))
+      } catch (error) {
+        console.warn("Unable to persist conversation history", error)
+      }
+    }, 300)
+    return () => clearTimeout(timer)
   }, [hydrated, messages])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return undefined
-    }
-
-    const onOnline = () => setIsLoading(false)
+    if (typeof window === "undefined") return
+    setIsOnline(navigator.onLine)
+    const onOnline = () => setIsOnline(true)
+    const onOffline = () => setIsOnline(false)
     window.addEventListener("online", onOnline)
-
+    window.addEventListener("offline", onOffline)
     return () => {
       window.removeEventListener("online", onOnline)
+      window.removeEventListener("offline", onOffline)
     }
   }, [])
 
   useEffect(() => {
     return () => {
+      abortControllerRef.current?.abort()
       if (typeof window !== "undefined" && window.speechSynthesis) {
         window.speechSynthesis.cancel()
       }
-
-      if (recognitionRef.current) {
-        recognitionRef.current.abort()
-      }
+      recognitionRef.current?.abort()
     }
   }, [])
 
-  const speakMessage = (text) => {
-    if (!speechEnabled || typeof window === "undefined" || !("speechSynthesis" in window)) {
-      return
-    }
+  const speakMessage = useCallback((text) => {
+    if (!speechEnabled || typeof window === "undefined" || !("speechSynthesis" in window)) return
+    window.speechSynthesis.cancel()
+    setIsSpeaking(false) // reset before new utterance — WebKit onend can fail to fire
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.rate = 1
+    utterance.pitch = 1
+    utterance.volume = 1
+    utterance.onstart = () => setIsSpeaking(true)
+    utterance.onend = () => setIsSpeaking(false)
+    utterance.onerror = (event) => { console.error("Speech synthesis error:", event); setIsSpeaking(false) }
+    window.speechSynthesis.speak(utterance)
+  }, [speechEnabled])
 
-    if (window.speechSynthesis) {
-      window.speechSynthesis.cancel()
-
-      const utterance = new SpeechSynthesisUtterance(text)
-      utterance.rate = 1
-      utterance.pitch = 1
-      utterance.volume = 1
-
-      utterance.onstart = () => setIsSpeaking(true)
-      utterance.onend = () => setIsSpeaking(false)
-      utterance.onerror = (event) => {
-        console.error("Speech synthesis error:", event)
-        setIsSpeaking(false)
-      }
-
-      window.speechSynthesis.speak(utterance)
-    }
-  }
+  const onMessageLinkSpeak = useCallback((href) => {
+    speakMessage(`The link is ${href}`)
+  }, [speakMessage])
 
   const stopSpeaking = () => {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -217,12 +218,21 @@ export default function Home() {
 
   useEffect(scrollToBottom, [messages])
 
+  const cleanForTTS = (text) =>
+    text
+      .replace(/https?:\/\/\S+/g, "link")
+      .replace(/#{1,6}\s/g, "")
+      .replace(/[*_`~[\]]/g, "")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+
   const sendMessage = async (messageText) => {
     const trimmedMessage = messageText.trim()
+    if (!trimmedMessage || isLoading) return
 
-    if (!trimmedMessage || isLoading) {
-      return
-    }
+    // Cancel any previous in-flight request — prevents memory leaks on fast resubmit
+    abortControllerRef.current?.abort()
+    const controller = new AbortController()
+    abortControllerRef.current = controller
 
     const userMessage = createMessage("user", trimmedMessage)
     setMessages((prev) => [...prev, userMessage])
@@ -236,6 +246,7 @@ export default function Home() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: trimmedMessage }),
+        signal: controller.signal,
       })
 
       if (!response.ok) {
@@ -245,14 +256,13 @@ export default function Home() {
       const data = await response.json()
       const botResponse = typeof data.response === "string" ? data.response : "I couldn't generate a response."
 
-      const botMessage = createMessage("bot", botResponse)
-      setMessages((prev) => [...prev, botMessage])
+      setMessages((prev) => [...prev, createMessage("bot", botResponse)])
       setIsTyping(false)
-      speakMessage(botResponse.replace(/\*/g, ""))
+      speakMessage(cleanForTTS(botResponse))
     } catch (error) {
-      console.error("Error:", error)
-      const errorMessage = createMessage("bot", "Sorry, I'm having trouble connecting to the server.")
-      setMessages((prev) => [...prev, errorMessage])
+      if (error.name === "AbortError") return
+      console.error("Chat error:", error)
+      setMessages((prev) => [...prev, createMessage("bot", "Sorry, I'm having trouble connecting to the server.")])
       setIsTyping(false)
       setLastFailedPrompt(trimmedMessage)
     } finally {
@@ -273,9 +283,10 @@ export default function Home() {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
     if (!SpeechRecognition) {
-      alert("Speech recognition is not supported in your browser.")
+      setVoiceError("Speech recognition is not supported in your browser.")
       return
     }
+    setVoiceError("")
 
     if (isListening && recognitionRef.current) {
       recognitionRef.current.abort()
@@ -315,7 +326,7 @@ export default function Home() {
 
   const handleQuickReply = (reply) => {
     setInput(reply)
-    inputRef.current.focus()
+    inputRef.current?.focus()
   }
 
   const retryLastPrompt = () => {
@@ -342,9 +353,9 @@ export default function Home() {
                   <Image src={collegeLogo} alt="College logo" width={44} height={44} className="h-11 w-11 object-contain" priority />
                 </div>
                 <div>
-                  <p className="mb-1 text-xs uppercase tracking-[0.32em] text-cyan-200/70">Student Assistant</p>
+                  <p className="mb-1 text-xs uppercase tracking-[0.32em] text-cyan-200/70">RCCIIT Student Assistant</p>
                   <h1 className="font-[family:var(--font-display)] text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                    Khalpar IIT Chatbot
+                    RCCIIT Chatbot
                   </h1>
                   <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
                     A cleaner, faster way to get answers about campus life, courses, deadlines, and support.
@@ -353,9 +364,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap items-center gap-2 text-xs text-slate-300">
-                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-emerald-200">
-                  <span className="h-2 w-2 rounded-full bg-emerald-300" />
-                  Online
+                <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 ${
+                  isOnline
+                    ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-200"
+                    : "border-amber-400/20 bg-amber-400/10 text-amber-200"
+                }`}>
+                  <span className={`h-2 w-2 rounded-full ${isOnline ? "bg-emerald-300" : "bg-amber-300"}`} />
+                  {isOnline ? "Online" : "Offline"}
                 </span>
                 <button
                   type="button"
@@ -428,7 +443,7 @@ export default function Home() {
                             : "border-white/10 bg-slate-950/50 text-slate-100 shadow-black/20"
                         }`}
                       >
-                        <MarkdownMessage onLinkSpeak={(href) => speakMessage(`The link is ${href}`)}>
+                        <MarkdownMessage onLinkSpeak={onMessageLinkSpeak}>
                           {message.content}
                         </MarkdownMessage>
                         <div className="mt-3 flex items-center gap-2 text-[0.7rem] text-slate-300/80">
@@ -439,25 +454,34 @@ export default function Home() {
                     </div>
                   </motion.article>
                 ))}
-              </AnimatePresence>
 
-              {isTyping ? (
-                <div className="mb-4 flex justify-start">
-                  <div className="flex items-center gap-3 rounded-[1.4rem] border border-white/10 bg-white/[0.06] px-4 py-3 text-slate-200 shadow-lg backdrop-blur-md">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-cyan-100">
-                      <Bot size={18} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-white">Thinking</p>
-                      <div className="mt-2 flex items-center gap-1.5">
-                        <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300" />
-                        <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300 [animation-delay:120ms]" />
-                        <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300 [animation-delay:240ms]" />
+                {isTyping && (
+                  <motion.div
+                    key="typing-indicator"
+                    initial={{ opacity: 0, y: 14, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -12 }}
+                    transition={{ duration: 0.25 }}
+                    role="status"
+                    aria-label="Assistant is typing"
+                    className="mb-4 flex justify-start"
+                  >
+                    <div className="flex items-center gap-3 rounded-[1.4rem] border border-white/10 bg-white/[0.06] px-4 py-3 text-slate-200 shadow-lg backdrop-blur-md">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-cyan-100">
+                        <Bot size={18} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-white">Thinking</p>
+                        <div className="mt-2 flex items-center gap-1.5">
+                          <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300" />
+                          <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300 [animation-delay:120ms]" />
+                          <span className="h-2 w-2 animate-bounce rounded-full bg-cyan-300 [animation-delay:240ms]" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ) : null}
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               <div ref={messagesEndRef} />
             </div>
@@ -491,6 +515,7 @@ export default function Home() {
                   }}
                   placeholder="Ask about admissions, exams, campus services, or anything else..."
                   rows={3}
+                  maxLength={2000}
                   className="w-full resize-none rounded-[1.1rem] border border-white/10 bg-slate-950/70 px-4 py-3 text-sm leading-6 text-white placeholder:text-slate-400 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                 />
 
@@ -502,18 +527,23 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-2 self-end sm:self-auto">
-                    <button
-                      type="button"
-                      onClick={handleVoiceInput}
-                      className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition ${
-                        isListening
-                          ? "border-rose-400/30 bg-rose-400/10 text-rose-100"
-                          : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      {isListening ? <MicOff size={16} /> : <Mic size={16} />}
-                      {isListening ? "Listening" : "Voice"}
-                    </button>
+                    <div className="flex flex-col items-end gap-1">
+                      <button
+                        type="button"
+                        onClick={handleVoiceInput}
+                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition ${
+                          isListening
+                            ? "border-rose-400/30 bg-rose-400/10 text-rose-100"
+                            : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        {isListening ? <MicOff size={16} /> : <Mic size={16} />}
+                        {isListening ? "Listening" : "Voice"}
+                      </button>
+                      {voiceError && (
+                        <span className="text-xs text-amber-300">{voiceError}</span>
+                      )}
+                    </div>
 
                     <button
                       type="submit"

@@ -1,12 +1,12 @@
 import "./globals.css"
 import { Inter, Space_Grotesk } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" })
+const inter = Inter({ subsets: ["latin"], display: "swap" })
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", display: "swap" })
 
 export const metadata = {
-  title: "Khalpar IIT Chatbot",
-  description: "A modern chatbot interface for university student information",
+  title: "RCCIIT Chatbot",
+  description: "A modern chatbot interface for RCCIIT student information",
 }
 
 export default function RootLayout({ children }) {
@@ -16,4 +16,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-

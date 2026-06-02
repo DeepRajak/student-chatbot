@@ -1,10 +1,11 @@
 import numpy as np
 import nltk
+from functools import lru_cache
 from nltk.stem import WordNetLemmatizer
 from threading import Lock
 
 _REQUIRED_NLTK_RESOURCES = (
-    ('tokenizers/punkt', 'punkt'),
+    ('tokenizers/punkt_tab', 'punkt_tab'),
     ('corpora/wordnet', 'wordnet'),
 )
 
@@ -34,35 +35,45 @@ def ensure_nltk_data(allow_download=False):
 
         if allow_download:
             for resource_name in missing_resources:
-                nltk.download(resource_name, quiet=True)
+                ok = nltk.download(resource_name, quiet=True)
+                if not ok:
+                    raise RuntimeError(f'Failed to download NLTK resource: {resource_name}')
             _NLTK_READY = True
             return True
 
         raise RuntimeError(
-            'Missing NLTK data: ' + ', '.join(missing_resources) + '. Install the resources during setup instead of downloading at import time.'
+            'Missing NLTK data: ' + ', '.join(missing_resources) +
+            '. Run: python -c "import nltk; nltk.download(\'punkt_tab\'); nltk.download(\'wordnet\')"'
         )
 
+
 def tokenize(sentence):
-    """Split sentence into array of words/tokens"""
     if not isinstance(sentence, str):
         return []
     return nltk.word_tokenize(sentence.lower())
 
+
+@lru_cache(maxsize=1024)
 def lemmatize(word):
-    """Find the base form of the word"""
     if not isinstance(word, str):
         return ""
     return lemmatizer.lemmatize(word.lower())
 
-def bag_of_words(tokenized_sentence, words):
-    """Return bag of words array"""
+
+def bag_of_words(tokenized_sentence, words, word_to_index=None):
+    """Return bag of words array.
+
+    Pass a pre-built word_to_index dict to skip rebuilding it on every call.
+    """
     if not tokenized_sentence or not words:
         return np.zeros(len(words) if words else 0, dtype=np.float32)
 
-    sentence_words = [lemmatize(word) for word in tokenized_sentence]
+    sentence_words = [lemmatize(w) for w in tokenized_sentence]
     bag = np.zeros(len(words), dtype=np.float32)
 
-    word_to_index = {word: index for index, word in enumerate(words)}
+    if word_to_index is None:
+        word_to_index = {word: index for index, word in enumerate(words)}
+
     for word in set(sentence_words):
         index = word_to_index.get(word)
         if index is not None:

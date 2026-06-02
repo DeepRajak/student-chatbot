@@ -2,7 +2,8 @@ import json, re, random
 from pathlib import Path
 
 p = Path(__file__).resolve().parent / 'intents.json'
-intents = json.load(p.open(encoding='utf-8'))['intents']
+with p.open(encoding='utf-8') as f:
+    intents = json.load(f)['intents']
 
 
 def find_intent(message):

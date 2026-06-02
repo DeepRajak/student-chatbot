@@ -2,6 +2,7 @@ import numpy as np
 import json
 import torch
 import torch.nn as nn
+from pathlib import Path
 from torch.utils.data import Dataset, DataLoader
 from nltk_utils import bag_of_words, tokenize, lemmatize, ensure_nltk_data
 from model import NeuralNet
@@ -23,7 +24,8 @@ def train_chatbot():
         ensure_nltk_data(allow_download=True)
 
         # Load intents
-        with open('intents.json', 'r', encoding='utf-8') as f:
+        intents_path = Path(__file__).resolve().parent / 'intents.json'
+        with open(intents_path, 'r', encoding='utf-8') as f:
             intents = json.load(f)
 
         # Initialize lists
@@ -45,6 +47,7 @@ def train_chatbot():
         all_words = [lemmatize(w) for w in all_words if w not in ignore_words]
         all_words = sorted(set(all_words))
         tags = sorted(set(tags))
+        tag_to_index = {tag: i for i, tag in enumerate(tags)}
 
         # Create training data
         X_train = []
@@ -53,8 +56,7 @@ def train_chatbot():
         for (pattern_sentence, tag) in xy:
             bag = bag_of_words(pattern_sentence, all_words)
             X_train.append(bag)
-            label = tags.index(tag)
-            y_train.append(label)
+            y_train.append(tag_to_index[tag])
 
         X_train = np.array(X_train)
         y_train = np.array(y_train)
@@ -80,17 +82,18 @@ def train_chatbot():
 
         # Training loop
         print("Training started...")
+        loss = None
         for epoch in range(num_epochs):
-            total_loss = 0
+            total_loss = 0.0
             for (words, labels) in train_loader:
                 words = words.to(device)
                 labels = labels.to(dtype=torch.long).to(device)
 
+                optimizer.zero_grad()
                 outputs = model(words)
                 loss = criterion(outputs, labels)
                 total_loss += loss.item()
 
-                optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
 
@@ -98,7 +101,10 @@ def train_chatbot():
                 avg_loss = total_loss / len(train_loader)
                 print(f'Epoch [{epoch+1}/{num_epochs}], Average Loss: {avg_loss:.4f}')
 
-        print(f'Final loss: {loss.item():.4f}')
+        if loss is not None:
+            print(f'Final loss: {loss.item():.4f}')
+        else:
+            print('No batches were processed during training.')
 
         data = {
             "model_state": model.state_dict(),
@@ -109,7 +115,7 @@ def train_chatbot():
             "tags": tags
         }
 
-        FILE = "data.pth"
+        FILE = Path(__file__).resolve().parent / 'data.pth'
         torch.save(data, FILE)
         print(f'Training complete. Model saved to {FILE}')
         return True
