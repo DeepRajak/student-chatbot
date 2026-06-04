@@ -278,7 +278,7 @@ chatbotpy/
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/<your-username>/student-chatbot.git
+git clone https://github.com/DeepRajak/student-chatbot.git
 cd student-chatbot
 ```
 
